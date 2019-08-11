@@ -1,109 +1,162 @@
 {
-  "protocol": "http",
-  "host": "test.loja.biz",
-  "browsers": [">1%"],
-  "pxtorem": {
-    "rootValue": 16,
-    "unitPrecision": 2
-  },
-  "theme": "neon",
-  "backstop": {
-    "local": false,
-    "id": "backstop_default",
-    "viewports": [
-      {
-        "label": "desktop",
-        "width": 1680,
-        "height": 700
-      },
-      {
-        "label": "iphone",
-        "width": 320,
-        "height": 480
-      }
+    "protocol": "http",
+    "host": "petix.loja.biz",
+    "browsers": [
+        ">1%"
     ],
-    "onBeforeScript": "chromy/onBefore.js",
-    "onReadyScript": "chromy/onReady.js",
-    "scenarios": [
-      {
-        "label": "Homepage",
-        "cookiePath": "backstop_data/engine_scripts/cookies.json",
-        "url": "/",
-        "referenceUrl": "",
-        "readyEvent": "",
-        "readySelector": "",
-        "delay": 0,
-        "hideSelectors": [".banner-js-container", ".banner"],
-        "removeSelectors": [".fb-page", "#__bs_notify__"],
-        "hoverSelector": "",
-        "clickSelector": "",
-        "postInteractionWait": "",
-        "selectors": [],
-        "selectorExpansion": true
-      },
-      {
-        "label": "Header",
-        "cookiePath": "backstop_data/engine_scripts/cookies.json",
-        "url": "/",
-        "removeSelectors": [".fb-page", "#__bs_notify__"],
-        "selectors": [".header-container"]
-      },
-      {
-        "label": "Meu carrinho",
-        "cookiePath": "backstop_data/engine_scripts/cookies.json",
-        "url": "/",
-        "hoverSelector": ".mycart",
-        "removeSelectors": [".fb-page", "#__bs_notify__"]
-      },
-      {
-        "label": "Categorias",
-        "cookiePath": "backstop_data/engine_scripts/cookies.json",
-        "url": "/",
-        "hoverSelector": ".li--0:last-child",
-        "removeSelectors": [".fb-page", "#__bs_notify__"]
-      },
-      {
-        "label": "Todas as categorias",
-        "cookiePath": "backstop_data/engine_scripts/cookies.json",
-        "url": "/",
-        "hoverSelector": ".categories__all",
-        "removeSelectors": [".fb-page", "#__bs_notify__"]
-      },
-      {
-        "label": "Minha conta",
-        "cookiePath": "backstop_data/engine_scripts/cookies.json",
-        "url": "/",
-        "hoverSelector": ".myaccount",
-        "removeSelectors": [".fb-page", "#__bs_notify__"]
-      },
-      {
-        "label": "Footer",
-        "cookiePath": "backstop_data/engine_scripts/cookies.json",
-        "url": "/",
-        "removeSelectors": [".banner-js-container", ".banner", ".fb-page", "#__bs_notify_"],
-        "selectors": [".footer-container"]
-      },
-      {
-        "label": "Produto",
-        "cookiePath": "backstop_data/engine_scripts/cookies.json",
-        "url": "/produto-simples-2",
-        "removeSelectors": [".banner-js-container", ".banner", ".fb-page", "#__bs_notify_"],
-        "selectors": [".main-container"]
-      },
-      {
-        "label": "Carrinho",
-        "cookiePath": "backstop_data/engine_scripts/cookies.json",
-        "url": "/cart",
-        "removeSelectors": [".banner-js-container", ".banner", ".fb-page", "#__bs_notify_"],
-        "selectors": [".main-container"]
-      },
-      {
-        "label": "Catalogo",
-        "cookiePath": "backstop_data/engine_scripts/cookies.json",
-        "url": "/cameras",
-        "selectors": [".main-container"],
-        "removeSelectors": [".banner-js-container", ".banner", ".fb-page", "#__bs_notify_"]
-      }
-    ]
-  }
+    "pxtorem": {
+        "rootValue": 16,
+        "unitPrecision": 2
+    },
+    "theme": "neon",
+    "backstop": {
+        "local": false,
+        "id": "backstop_default",
+        "viewports": [
+            {
+                "label": "desktop",
+                "width": 1680,
+                "height": 700
+            },
+            {
+                "label": "iphone",
+                "width": 320,
+                "height": 480
+            }
+        ],
+        "onBeforeScript": "chromy/onBefore.js",
+        "onReadyScript": "chromy/onReady.js",
+        "scenarios": [
+            {
+                "label": "Homepage",
+                "cookiePath": "backstop_data/engine_scripts/cookies.json",
+                "url": "/",
+                "referenceUrl": "",
+                "readyEvent": "",
+                "readySelector": "",
+                "delay": 0,
+                "hideSelectors": [
+                    ".banner-js-container",
+                    ".banner"
+                ],
+                "removeSelectors": [
+                    ".fb-page",
+                    "#__bs_notify__"
+                ],
+                "hoverSelector": "",
+                "clickSelector": "",
+                "postInteractionWait": "",
+                "selectors": [],
+                "selectorExpansion": true
+            },
+            {
+                "label": "Header",
+                "cookiePath": "backstop_data/engine_scripts/cookies.json",
+                "url": "/",
+                "removeSelectors": [
+                    ".fb-page",
+                    "#__bs_notify__"
+                ],
+                "selectors": [
+                    ".header-container"
+                ]
+            },
+            {
+                "label": "Meu carrinho",
+                "cookiePath": "backstop_data/engine_scripts/cookies.json",
+                "url": "/",
+                "hoverSelector": ".mycart",
+                "removeSelectors": [
+                    ".fb-page",
+                    "#__bs_notify__"
+                ]
+            },
+            {
+                "label": "Categorias",
+                "cookiePath": "backstop_data/engine_scripts/cookies.json",
+                "url": "/",
+                "hoverSelector": ".li--0:last-child",
+                "removeSelectors": [
+                    ".fb-page",
+                    "#__bs_notify__"
+                ]
+            },
+            {
+                "label": "Todas as categorias",
+                "cookiePath": "backstop_data/engine_scripts/cookies.json",
+                "url": "/",
+                "hoverSelector": ".categories__all",
+                "removeSelectors": [
+                    ".fb-page",
+                    "#__bs_notify__"
+                ]
+            },
+            {
+                "label": "Minha conta",
+                "cookiePath": "backstop_data/engine_scripts/cookies.json",
+                "url": "/",
+                "hoverSelector": ".myaccount",
+                "removeSelectors": [
+                    ".fb-page",
+                    "#__bs_notify__"
+                ]
+            },
+            {
+                "label": "Footer",
+                "cookiePath": "backstop_data/engine_scripts/cookies.json",
+                "url": "/",
+                "removeSelectors": [
+                    ".banner-js-container",
+                    ".banner",
+                    ".fb-page",
+                    "#__bs_notify_"
+                ],
+                "selectors": [
+                    ".footer-container"
+                ]
+            },
+            {
+                "label": "Produto",
+                "cookiePath": "backstop_data/engine_scripts/cookies.json",
+                "url": "/produto-simples-2",
+                "removeSelectors": [
+                    ".banner-js-container",
+                    ".banner",
+                    ".fb-page",
+                    "#__bs_notify_"
+                ],
+                "selectors": [
+                    ".main-container"
+                ]
+            },
+            {
+                "label": "Carrinho",
+                "cookiePath": "backstop_data/engine_scripts/cookies.json",
+                "url": "/cart",
+                "removeSelectors": [
+                    ".banner-js-container",
+                    ".banner",
+                    ".fb-page",
+                    "#__bs_notify_"
+                ],
+                "selectors": [
+                    ".main-container"
+                ]
+            },
+            {
+                "label": "Catalogo",
+                "cookiePath": "backstop_data/engine_scripts/cookies.json",
+                "url": "/cameras",
+                "selectors": [
+                    ".main-container"
+                ],
+                "removeSelectors": [
+                    ".banner-js-container",
+                    ".banner",
+                    ".fb-page",
+                    "#__bs_notify_"
+                ]
+            }
+        ]
+    }
 }

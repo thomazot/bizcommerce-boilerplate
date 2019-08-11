@@ -20,7 +20,8 @@
     "button:transpile": "babel ./components/src/add-to-cart.js -o ./components/dist/add-to-cart-es5.js",
     "button": "npm run button:transpile",
     "cart": "npm run cart:bundle && npm run cart:transpile",
-    "components": "npm run cart && npm run button"
+    "components": "npm run cart && npm run button",
+    "start": "npx gulp watch"
   },
   "keywords": [
     "bizcommerce",
