@@ -1,46 +1,46 @@
 {
-  "name": "biz-boilerplate",
-  "version": "1.0.1",
-  "description": "Estrutura base para custoizaÃ§Ã£o de Layouts Biz4",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "backstopjs": "^3.8.8",
-    "gulp": "3.9.1",
-    "gulp-clipboard": "^0.1.1",
-    "gulp-if": "^2.0.0",
-    "gulp-stylus": "^2.7.0",
-    "gulp-svg-sprite": "^1.5.0",
-    "gulp-svgmin": "^2.1.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clear": "rm -rf components/dist && mkdir componets/dist",
-    "cart:bundle": "rollup components/src/cart-component.js --o components/dist/cart-bundle-es6.js --format umd --name=CartComponent",
-    "cart:transpile": "babel ./components/dist/cart-bundle-es6.js -o ./components/dist/cart-bundle-es5.js",
-    "button:transpile": "babel ./components/src/add-to-cart.js -o ./components/dist/add-to-cart-es5.js",
-    "button": "npm run button:transpile",
-    "cart": "npm run cart:bundle && npm run cart:transpile",
-    "components": "npm run cart && npm run button",
-    "start": "npx gulp watch"
-  },
-  "keywords": [
-    "bizcommerce",
-    "biz4",
-    "skins",
-    "magento"
-  ],
-  "author": "Bizcommerce",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
-    "@babel/preset-env": "^7.4.1",
-    "@webcomponents/webcomponentsjs": "^2.0.0",
-    "autoprefixer": "^9.0.1",
-    "browser-sync": "^2.26.3",
-    "gulp-postcss": "^7.0.0",
-    "postcss": "^6.0.23",
-    "postcss-pxtorem": "^4.0.1",
-    "rollup": "^0.62.0"
-  }
+    "name": "biz-boilerplate",
+    "version": "1.0.1",
+    "description": "Estrutura base para custoizaÃ§Ã£o de Layouts Biz4",
+    "main": "gulpfile.js",
+    "dependencies": {
+        "backstopjs": "^3.8.8",
+        "gulp": "3.9.1",
+        "gulp-clipboard": "^0.1.1",
+        "gulp-if": "^2.0.0",
+        "gulp-stylus": "^2.7.0",
+        "gulp-svg-sprite": "^1.5.0",
+        "gulp-svgmin": "^2.1.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "clear": "rm -rf components/dist && mkdir componets/dist",
+        "cart:bundle": "rollup components/src/cart-component.js --o components/dist/cart-bundle-es6.js --format umd --name=CartComponent",
+        "cart:transpile": "babel ./components/dist/cart-bundle-es6.js -o ./components/dist/cart-bundle-es5.js",
+        "button:transpile": "babel ./components/src/add-to-cart.js -o ./components/dist/add-to-cart-es5.js",
+        "button": "npm run button:transpile",
+        "cart": "npm run cart:bundle && npm run cart:transpile",
+        "components": "npm run cart && npm run button",
+        "start": "npx gulp watch"
+    },
+    "keywords": [
+        "bizcommerce",
+        "biz4",
+        "skins",
+        "magento"
+    ],
+    "author": "Bizcommerce",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.4.0",
+        "@babel/preset-env": "^7.4.1",
+        "@webcomponents/webcomponentsjs": "^2.0.0",
+        "autoprefixer": "^9.0.1",
+        "browser-sync": "^2.26.3",
+        "gulp-postcss": "^7.0.0",
+        "postcss": "^6.0.23",
+        "postcss-pxtorem": "^4.0.1",
+        "rollup": "^0.62.0"
+    }
 }
