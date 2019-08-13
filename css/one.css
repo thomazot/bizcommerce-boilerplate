@@ -11673,3 +11673,52 @@ body {
   background: #f9f0d5;
   color: #f7be07;
 }
+@media (max-width: 992px) {
+  .categories .parent {
+    position: relative;
+  }
+  .categories .parent > ul {
+    display: none;
+  }
+  .categories .parent:after {
+    content: '';
+  }
+  .categories .parent > a {
+    display: flex;
+    min-height: 48px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .categories .parent:after {
+    font-family: 'biz_icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    content: '\f054';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    background: rgba(255,255,255,0.1);
+    transition: all 0.2s ease;
+  }
+  .categories .parent.on:after {
+    transform: rotate(90deg);
+  }
+  .categories .parent.on > ul {
+    display: block;
+  }
+  .categories .all-li--0 {
+    padding-bottom: 0;
+  }
+}

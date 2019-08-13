@@ -1,32 +1,25 @@
 
 /**
-* Mixins
-*/
-
+ * Mixins
+ */
 /**
-* Mixin - Font-weight
-*/
+ * Mixin - Font-weight
+ */
 light = 300
 regular = 400
 medium = 500
 semibold = 600
 bold = 700
-
-
-
 /**
-* Mixin - Viewport
-*/
+ * Mixin - Viewport
+ */
 viewport = 1160px
-
-
 /**
-* Mixin - Responsive
-* @media (max-width screen-sm-min)
-* @media (max-width screen-md-min)
-* @media (max-width screen-lg-min)
-*/
-// Smaller devices (phones, 320px and down)
+ * Mixin - Responsive
+ * @media (max-width screen-sm-min)
+ * @media (max-width screen-md-min)
+ * @media (max-width screen-lg-min)
+ */
 screen-xxs = 320px
 // Small devices (phones, 568px and down)
 screen-xs = 568px
@@ -37,60 +30,61 @@ screen-md = 992px
 // Medium devices (desktops, 1200px and down)
 screen-lg = 1200px
 
-
 /*
-* Global
-* Elementos globais que podem ser extendidos ao longo do documento
-*/
+ * Global
+ * Elementos globais que podem ser extendidos ao longo do documento
+ */
 .container
-  min-width: 0
-  max-width: viewport
-  margin 0 auto
-  width: auto
-
+    min-width: 0
+    max-width: viewport
+    margin: 0 auto
+    width: auto
 
 /*
-* Base
-* Estilo base do elementos do Html
-*/
+ * Base
+ * Estilo base do elementos do Html
+ */
 body
-  font-family: 'Exo 2', sans-serif
-
-
-/*
-* Components
-* Componentes que se adaptam ao contexto
-*/
+    font-family: 'Exo 2', sans-serif
 
 /*
-* Component - Menssagens
-*/
+ * Components
+ * Componentes que se adaptam ao contexto
+ */
+/*
+ * Component - Menssagens
+ */
 .messages
-  > li
-    display block
-    padding 10px 20px
-    margin-bottom 20px
-    font-size 14px
-  .success-msg
-    border 1px solid #2baf60
-    background #c8efc0
-    color #1d904b
-  .error-msg
-    border 1px solid #d92100
-    background #ffdcdc
-    color #d92100
-  .notice-msg
-    border 1px solid #f7be07
-    background #f9f0d5
-    color #f7be07
+    > li
+        display: block
+        padding: 10px 20px
+        margin-bottom: 20px
+        font-size: 14px
+
+    .success-msg
+        border: 1px solid #2baf60
+        background: #c8efc0
+        color: #1d904b
+
+    .error-msg
+        border: 1px solid #d92100
+        background: #ffdcdc
+        color: #d92100
+
+    .notice-msg
+        border: 1px solid #f7be07
+        background: #f9f0d5
+        color: #f7be07
 
 /*
-* State
-* Estado global do Layout
-*/
-
-
+ * State
+ * Estado global do Layout
+ */
 /*
-* Theme
-* Customização de components ou layout, hacks !importants e etc
-*/
+ * Theme
+ * Customização de components ou layout, hacks !importants e etc
+ */
+/**
+ * Components
+ */
+@import 'components/categories'

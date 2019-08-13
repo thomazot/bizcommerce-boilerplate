@@ -1,0 +1,41 @@
+@media (max-width: 992px)
+    .categories
+        .parent
+            position: relative
+
+            > ul
+                display: none
+
+            &:after
+                content: ''
+
+            > a
+                display: flex
+                min-height: 48px
+                justify-content: flex-start
+                align-items: center
+
+            &:after
+                icon('\f054')
+                position: absolute
+                top: 0
+                right: 0
+                z-index: 10
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 48px
+                height: 48px
+                font-size: 20px
+                background: rgba(255, 255, 255, 0.1)
+                transition: all 0.2s ease
+
+            &.on
+                &:after
+                    transform: rotate(90deg)
+
+                > ul
+                    display: block
+
+        .all-li--0
+            padding-bottom: 0
