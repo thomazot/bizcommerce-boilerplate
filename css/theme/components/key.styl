@@ -1,0 +1,63 @@
+.key
+    display: block
+    margin-left: 30px
+    max-width: 180px
+
+    .user-logged &
+        display: none
+
+    &__header
+        border-radius: 58px
+        background: color2_bg
+
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0 20px
+            height: 58px
+
+        i
+            font-size: 18px
+            color: #fff
+
+    &__link
+        display: none
+        font-size: 13px
+        font-weight: semibold
+        color: color1_bg
+
+        span
+            display: block
+            color: #fff
+
+.products
+    .key
+        margin: 0 auto
+
+        &__header
+            i
+                margin-right: 10px
+
+        &__link
+            display: block
+
+.prod__shop
+    .key
+        margin-left: 0
+
+        &__header
+            i
+                margin-right: 10px
+
+        &__link
+            display: block
+
+@media (min-width: 993px)
+    .key
+        &__header
+            i
+                margin-right: 10px
+
+        &__link
+            display: block

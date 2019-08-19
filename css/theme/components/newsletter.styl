@@ -1,0 +1,66 @@
+#news-main
+    &.newsletter
+        width: viewport
+        max-width: 100%
+        margin: 40px auto
+
+        .newsletter
+            &__btn
+                height: 58px
+                width: 110px
+                border-radius: 58px
+                box-shadow: none
+                font-size: 13px
+                font-weight: semibold
+                background: #f5f5f5
+                color: color1_bg
+
+            &__form
+                position: relative
+
+            &__submit
+                position: absolute
+                right: 0
+                bottom: 0
+
+            &__email
+                input[type=email]
+                    padding-right: 130px
+
+    input
+        &[type=text], &[type=email]
+            height: 58px
+            line-height: 58px
+            border: 0
+            background: #f5f5f5
+            border-radius: 58px
+            font-size: 13px
+            font-weight: semibold
+            color: #a0a0a0
+            padding: 0 20px
+
+    .title
+        margin-bottom: 0
+        font-size: 20px
+        font-weight: semibold
+        color: color1_bg
+
+        strong
+            font-weight: semibold
+            color: color2_bg
+
+    .description
+        font-size: 14px
+        font-weight: regular
+        color: color1_bg
+
+@media (min-width: 993px)
+    .newsletter
+        &__form
+            display: flex
+            align-items: center
+            flex-wrap: nowrap
+
+        &__text
+            max-width: 460px
+            margin-bottom: 0

@@ -1,0 +1,94 @@
+.contact-us
+    position: relative
+    z-index: 10
+    display: none
+
+    .header &
+        margin-left: 35px
+
+    &__header
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-flow: row wrap
+        text-align: center
+        padding: 10px 0
+        cursor: pointer
+
+        i
+            font-size: 4px
+            margin-bottom: -3px
+            margin-left: 3px
+            color: color1_bg
+
+    &__ico
+        display: block
+        flex: 0 0 100%
+        width: 21px
+        height: 21px
+        margin-bottom: 10px
+
+    &__label
+        font-size: 13px
+        font-weight: semibold
+        color: color1_bg
+
+    &__main
+        position: absolute
+        top: 100%
+        left: 50%
+        padding: 25px 40px
+        transform: translateX(-50%) translateY(20%)
+        opacity: 0
+        visibility: hidden
+        border: solid 1px #e5eef5
+        border-radius: 4px
+        background: #fff
+        transition: all 0.2s ease
+
+    &__title
+        font-size: 20px
+        font-weight: medium
+        color: color1_bg
+        margin-bottom: 15px
+
+        strong
+            color: color2_bg
+
+    &__link
+        font-size: 15px
+        font-weight: bold
+        color: color1_bg
+
+        &:hover
+            color: color2_bg
+
+    &__phone
+        padding: 15px 0 0
+
+    &__number
+        font-size: 15px
+        font-weight: bold
+        color: color1_bg
+
+    &__text
+        font-size: 13px
+        font-weight: regular
+        color: #a7a7a7
+
+    &__timer
+        padding-top: 15px
+        font-size: 13px
+        font-weight: regular
+        color: #a7a7a7
+
+    &:hover
+        .contact-us
+            &__main
+                opacity: 1
+                visibility: visible
+                transform: translateX(-50%) translateY(0)
+
+@media (min-width: 992px)
+    .contact-us
+        display: block

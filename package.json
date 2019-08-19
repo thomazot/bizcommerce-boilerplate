@@ -21,6 +21,7 @@
         "button": "npm run button:transpile",
         "cart": "npm run cart:bundle && npm run cart:transpile",
         "components": "npm run cart && npm run button",
+        "svg": "npx gulp svg",
         "start": "npx gulp watch"
     },
     "keywords": [

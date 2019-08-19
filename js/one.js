@@ -904,7 +904,7 @@ function default_carrossel_produtos() {
                         [568, 2],
                         [768, 3],
                         [1024, 4],
-                        [1270, 5],
+                        [1270, 4],
                     ],
                     beforeMove: function() {
                         if (typeof $j.fn.lazyload != 'undefined') {
@@ -1424,6 +1424,23 @@ $j(document)
                 $(event.target).toggleClass('on')
             }
         })
+
+        var rulers = $('.rulers__container')
+
+        if (rulers.length)
+            rulers.owlCarousel({
+                itemsScaleUp: true,
+                navigation: true,
+                navigationText: ['?', '?'],
+                pagination: false,
+            })
+
+        var freteTitle = $('.frete__title')
+        if (freteTitle.length) {
+            freteTitle.prepend(
+                '<svg class="frete__icon"><use xlink:href="#zot-truck" /></svg>'
+            )
+        }
     })
     .on('resizeStop', function(e) {
         // Safe window.resize

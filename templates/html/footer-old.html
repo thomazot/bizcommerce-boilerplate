@@ -1,0 +1,77 @@
+<div class="flex flex--wrap flex--j-between">
+    <div class="footer__contact">
+        <div class="title title--sm">Central de Atendimento</div>
+        <div class="tele">
+            {{config path="general/store_information/phone"}}
+        </div>
+        <div class="horario">
+            {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="horario-atendimento"}}
+            <div class="email">
+                {{config path="trans_email/ident_general/email"}}
+            </div>
+        </div>
+    </div>
+    <div class="footer__about">
+        <div class="title title--sm">
+            {{config path="general/store_information/name"}}
+        </div>
+        {{block type="menubuilder/output" identifier="sobre-a-loja"}}
+        {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="perfis_footer" titulo="Redes Sociais" redes="all"}}
+    </div>
+    <div class="footer__doubts">
+        <div class="title title--sm">Tire suas Dúvidas</div>
+        {{block type="menubuilder/output" identifier="tire-duvidas"}}
+    </div>
+    <div class="footer__account">
+        <div class="title title--sm">Minha Conta</div>
+        {{widget type="interface/widget_suaconta"
+        template="interface/widgets/suaconta.phtml"
+        identificador="minha_conta_footer" menu_logado="3" titulo_logado="Oi
+        @nome-usuario!" texto_logado="<a
+            href="@url-conta"
+            title="Acessar conta"
+        >
+            <svg class="ico">
+                <use
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="#i-user"
+                ></use>
+            </svg>
+            <span class="thumb">@foto-usuario</span>
+            <span class="name">@nome-usuario</span></a
+        >" titulo_visitante="Faça seu login ou cadastre-se" texto_visitante="<a
+            href="@url-conta"
+            title="Fazer login"
+        >
+            <svg class="ico">
+                <use
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="#i-user"
+                ></use>
+            </svg>
+            <span class="text">Bem vindo!</span></a
+        >" texto_cadastro="
+        <p>
+            Cadastre-se em nossa loja para <strong>acompanhar pedidos</strong> e
+            finalizar suas compras com agilidade!
+        </p>
+        " botao_cadastro="Cadastrar" label_email="E-mail" placeholder_email="Seu
+        e-mail" label_senha="Senha" placeholder_senha="Sua senha"
+        botao_login="Entrar"}}
+    </div>
+</div>
+
+<div class="flex flex--wrap flex--a-center flex--j-between">
+    <div class="footer__payments">
+        {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="pagtos_footer" titulo="Formas de Pagamento" pagtos="all"}}
+    </div>
+    <div class="footer__shipments">
+        {{widget type="interface/widget_envios" template="interface/widgets/envios.phtml" identificador="envios_tooer" titulo="Formas de Envio" envios="2,5,3,4"}}
+    </div>
+    <div class="footer__certificates">
+        {{widget type="interface/widget_seals" template="interface/widgets/seals.phtml" identificador="selos_footer" titulo="Certificados" seals="all"}}
+    </div>
+</div>
+<div class="footer__copyright">
+    {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="footer-texto-2"}}
+</div>

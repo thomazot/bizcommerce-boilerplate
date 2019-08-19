@@ -1,0 +1,88 @@
+.footer
+    text-align: center
+
+    &, a, .std
+        color: #464646
+
+    .socials
+        padding-top: 0
+
+    .mymenu
+        .a--0
+            font-size: 13px
+            font-weight: medium
+            color: #464646
+
+        .li--0:not(:last-child)
+            margin-bottom: 16px
+
+    .tele
+        font-size: 18px
+        font-weight: bold
+        color: color1_bg
+        line-height: 30px
+
+    .horario
+        .std
+            font-size: 13px
+            font-weight: medium
+
+    .email
+        padding-top: 0
+        font-size: 16px
+        font-weight: bold
+        color: color2_bg
+        padding: 5px 0
+
+    &__title
+        padding: 20px 0
+        font-size: 16px
+        font-weight: semibold
+        color: color1_bg
+
+    &-container
+        background: #fff
+
+    &__copyright
+        margin-top: 40px
+        padding-top: 40px
+        border-top: solid 1px #e5eef5
+
+        .std
+            font-size: 12px
+            text-align: center
+            color: #a0a0a0
+
+    &__menu
+        + .footer__menu
+            margin-top: 15px
+
+.pays, .ships, .certs, .socials
+    &__list
+        justify-content: center
+
+    &__svg
+        height: 25px
+
+@media (min-width: 993px)
+    .footer
+        &__row
+            display: flex
+            justify-content: space-between
+            width: viewport
+            max-width: 100%
+            margin: 0 auto
+            text-align: left
+            padding: 0 16px
+
+        &__col
+            display: flex
+            flex-flow: column nowrap
+            justify-content: space-between
+
+            &:nth-child(1)
+                max-width: 290px
+
+    .pays, .ships, .certs, .socials
+        &__list
+            justify-content: flex-start

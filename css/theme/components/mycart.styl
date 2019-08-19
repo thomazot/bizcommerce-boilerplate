@@ -1,0 +1,212 @@
+.mycart
+    height: auto
+    display: none
+
+    .user-logged &
+        display: block
+
+    &__header
+        text-align: center
+        padding: 10px 0
+
+    &__link
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+
+    &__icon
+        flex: 0 0 100%
+        width: 24px
+        height: 21px
+
+    &__label
+        display: none
+        font-size: 13px
+        font-weight: semibold
+        color: color1_bg
+
+    &__item
+        margin-bottom: 0
+        padding-bottom: 0
+        border-bottom: 0
+
+        + .mycart__item
+            padding-top: 10px
+            margin-top: 10px
+            border-top: solid 1px #e5eef5
+
+    &__details
+        text-align: right
+
+        .price
+            font-size: 16px
+            font-weight: semibold
+            color: color1_bg
+
+    &__name
+        margin-bottom: 10px
+
+        a
+            font-size: 14px
+            font-weight: semibold
+            color: color1_bg
+
+    &__qtd
+        margin-bottom: 10px
+        font-size: 14px
+        font-weight: regular
+        text-transform: uppercase
+        color: #a7a7a7
+
+    &__totals
+        .mycart & .title
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            margin: 20px 0
+            font-size: 16px
+            font-weight: regular
+            text-transform: uppercase
+            color: #a7a7a7
+
+            &:before
+                content: ''
+                flex: 1
+                min-width: 0
+                height: 1px
+                margin-right: 5px
+                background: #e5eef5
+
+        .regular-price
+            display: block
+            text-align: right
+            padding-bottom: 10px
+            margin-bottom: 15px
+            border-bottom: solid 1px #e5eef5
+
+            .label
+                display: none
+
+            .price
+                font-size: 16px
+                font-weight: semibold
+                color: color1_bg
+
+        .price-box-avista
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-bottom: 15px
+            border-bottom: solid 1px #e5eef5
+
+            .discount
+                order: -1
+                margin-right: 3px
+
+            .label, .discount
+                font-size: 14px
+                font-weight: medium
+                color: #a7a7a7
+                text-transform: uppercase
+
+            .price
+                flex: 1
+                min-width: 0
+                display: flex
+                justify-content: flex-end
+                font-size: 16px
+                font-weight: semibold
+                color: color1_bg
+
+        .price-box-parcelado
+            text-align: right
+            font-size: 14px
+            font-weight: regular
+            color: #a7a7a7
+
+            .num, .value .price
+                font-size: 14px
+                font-weight: regular
+                color: #a7a7a7
+
+            .juros, .sem-juros
+                font-size: 16px
+                line-height: 1.4
+
+    &__actions
+        margin: 0
+        padding-top: 15px
+
+        .editar
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            height: 50px
+            padding: 0
+            font-size: 14px
+            font-weight: regular
+            color: #a7a7a7
+
+            &:hover
+                background: none
+                color: #a7a7a7
+
+            &:before
+                content: 'Alterar Carrinho'
+
+            span
+                display: none
+
+        .finalizar
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 130px
+            padding: 0
+            border-radius: 4px
+            font-size: 16px
+            font-weight: regular
+            color: #fff
+            background: #12a000
+
+            &:hover
+                background: #12a000
+
+    .title
+        font-size: 20px
+        font-weight: bold
+        color: color2_bg
+
+@media (min-width: 993px)
+    .mycart
+        &__icon
+            margin-bottom: 10px
+
+        &__label
+            display: block
+
+        &__content
+            display: block
+            border: solid 1px #e5eef5
+            border-radius: 4px
+            box-shadow: none
+            padding: 15px
+            transform: translateY(20%)
+            transition: all 0.2s ease
+            visibility: hidden
+            opacity: 0
+
+        &__remove
+            transform: translateX(-100%)
+            transition: all 0.2s ease
+
+        &__item:hover
+            .mycart__remove
+                transform: translateX(0)
+
+        &:hover
+            .mycart__content
+                visibility: visible
+                transform: translateY(0)
+                opacity: 1
