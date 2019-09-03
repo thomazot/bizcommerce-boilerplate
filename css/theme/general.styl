@@ -5,7 +5,6 @@
 /**
  * Mixin - Font-weight
  */
-font = unquote("'Montserrat', sans-serif")
 light = 300
 regular = 400
 medium = 500
@@ -14,7 +13,7 @@ bold = 700
 /**
  * Mixin - Viewport
  */
-viewport = 1130px
+viewport = 1160px
 /**
  * Mixin - Responsive
  * @media (max-width screen-sm-min)
@@ -41,29 +40,12 @@ screen-lg = 1200px
     margin: 0 auto
     width: auto
 
-@media (min-width: 993px)
-    .wrapper-container
-        padding-top: 180px
-
 /*
  * Base
  * Estilo base do elementos do Html
  */
 body
-    font: normal regular 16px / 1.2 font
-
-.header, .main-container, .footer
-    max-width: 100%
-    width: viewport
-    margin: 0 auto
-
-.main-container
-    .cms-home &
-        width: 100%
-
-@media (min-width: 993px)
-    .wrapper
-        padding: 0
+    font-family: 'Exo 2', sans-serif
 
 /*
  * Components
@@ -98,15 +80,6 @@ body
  * State
  * Estado global do Layout
  */
-input[type=text], input[type=password], input[type=search], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=date], input[type=mounth], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color]
-    height: 48px
-    line-height: 48px
-    padding: 0 16px
-    background: #fff
-    border: solid 1px #e5eef5
-    border-radius: 4px
-    box-shadow: none
-
 /*
  * Theme
  * Customização de components ou layout, hacks !importants e etc
@@ -116,21 +89,3 @@ input[type=text], input[type=password], input[type=search], input[type=email], i
  */
 @import 'components/logo'
 @import 'components/categories'
-@import 'components/myaccount'
-@import 'components/mycart'
-@import 'components/header'
-@import 'components/search'
-@import 'components/contact-us'
-@import 'components/prices'
-@import 'components/rulers'
-@import 'components/brands'
-@import 'components/products'
-@import 'components/banner'
-@import 'components/newsletter'
-@import 'components/about'
-@import 'components/footer'
-@import 'components/breadcrumb'
-@import 'components/key'
-// pages
-@import 'pages/home'
-@import 'pages/product'

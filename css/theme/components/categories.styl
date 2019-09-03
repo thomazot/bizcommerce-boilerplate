@@ -1,10 +1,5 @@
 @media (max-width: 992px)
     .categories
-        &__show
-            order: -1
-            background: #fff
-            color: color1_bg
-
         .parent
             position: relative
 
@@ -34,7 +29,6 @@
                 font-size: 20px
                 background: rgba(255, 255, 255, 0.1)
                 transition: all 0.2s ease
-                color: #fff
 
             &.on
                 &:after
@@ -45,92 +39,3 @@
 
         .all-li--0
             padding-bottom: 0
-
-@media (min-width: 569px)
-    .categories
-        &__show
-            margin-right: 0
-
-@media (min-width: 993px)
-    .categories
-        background: #f5f5f5
-
-        &__all
-            display: none
-
-        &--justify
-            .ul--0
-                justify-content: space-between
-
-            .li--0
-                flex: 0 0 auto
-
-            .box--1
-                box-shadow: none
-                border: solid 1px #e5eef5
-                border-radius: 4px
-                padding: 30px
-
-        .li--0
-            &.parent
-                .a--0
-                    &:after
-                        content: '\f078'
-                        font-family: 'Font Awesome 5 Pro'
-                        font-weight: 900
-                        font-size: 8px
-                        margin-left: 3px
-                        margin-bottom: -2px
-
-            &:hover
-                .a--0
-                    background: none
-                    color: color1_bg
-
-                    &:before
-                        max-width: 100%
-
-        .a--0
-            position: relative
-            height: 65px
-            font-size: 15px
-            font-weight: semibold
-            color: color1_bg
-
-            &:before
-                content: ''
-                position: absolute
-                left: 0
-                bottom: 10px
-                height: 4px
-                width: 100%
-                max-width: 0
-                border-radius: 4px
-                background: color2_bg
-                transition: all 0.2s ease
-
-        .a--1
-            font-size: 14px
-            font-weight: semibold
-            color: color1_bg
-
-        .ul--0
-            max-width: viewport
-
-        &__products, &__block
-            border-left: 0
-
-            .title
-                display: none
-
-            .product
-                &__main
-                    text-align: center
-
-                &__name
-                    font-size: 14px
-                    font-weight: semibold
-                    color: color1_bg
-
-            .no-rating
-                display: none
