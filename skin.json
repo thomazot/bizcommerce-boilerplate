@@ -1,9 +1,7 @@
 {
     "protocol": "http",
-    "host": "petix.loja.biz",
-    "browsers": [
-        ">1%"
-    ],
+    "host": "oculosmarcapropria.loja.biz",
+    "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,
         "unitPrecision": 2
@@ -35,14 +33,8 @@
                 "readyEvent": "",
                 "readySelector": "",
                 "delay": 0,
-                "hideSelectors": [
-                    ".banner-js-container",
-                    ".banner"
-                ],
-                "removeSelectors": [
-                    ".fb-page",
-                    "#__bs_notify__"
-                ],
+                "hideSelectors": [".banner-js-container", ".banner"],
+                "removeSelectors": [".fb-page", "#__bs_notify__"],
                 "hoverSelector": "",
                 "clickSelector": "",
                 "postInteractionWait": "",
@@ -53,53 +45,36 @@
                 "label": "Header",
                 "cookiePath": "backstop_data/engine_scripts/cookies.json",
                 "url": "/",
-                "removeSelectors": [
-                    ".fb-page",
-                    "#__bs_notify__"
-                ],
-                "selectors": [
-                    ".header-container"
-                ]
+                "removeSelectors": [".fb-page", "#__bs_notify__"],
+                "selectors": [".header-container"]
             },
             {
                 "label": "Meu carrinho",
                 "cookiePath": "backstop_data/engine_scripts/cookies.json",
                 "url": "/",
                 "hoverSelector": ".mycart",
-                "removeSelectors": [
-                    ".fb-page",
-                    "#__bs_notify__"
-                ]
+                "removeSelectors": [".fb-page", "#__bs_notify__"]
             },
             {
                 "label": "Categorias",
                 "cookiePath": "backstop_data/engine_scripts/cookies.json",
                 "url": "/",
                 "hoverSelector": ".li--0:last-child",
-                "removeSelectors": [
-                    ".fb-page",
-                    "#__bs_notify__"
-                ]
+                "removeSelectors": [".fb-page", "#__bs_notify__"]
             },
             {
                 "label": "Todas as categorias",
                 "cookiePath": "backstop_data/engine_scripts/cookies.json",
                 "url": "/",
                 "hoverSelector": ".categories__all",
-                "removeSelectors": [
-                    ".fb-page",
-                    "#__bs_notify__"
-                ]
+                "removeSelectors": [".fb-page", "#__bs_notify__"]
             },
             {
                 "label": "Minha conta",
                 "cookiePath": "backstop_data/engine_scripts/cookies.json",
                 "url": "/",
                 "hoverSelector": ".myaccount",
-                "removeSelectors": [
-                    ".fb-page",
-                    "#__bs_notify__"
-                ]
+                "removeSelectors": [".fb-page", "#__bs_notify__"]
             },
             {
                 "label": "Footer",
@@ -111,9 +86,7 @@
                     ".fb-page",
                     "#__bs_notify_"
                 ],
-                "selectors": [
-                    ".footer-container"
-                ]
+                "selectors": [".footer-container"]
             },
             {
                 "label": "Produto",
@@ -125,9 +98,7 @@
                     ".fb-page",
                     "#__bs_notify_"
                 ],
-                "selectors": [
-                    ".main-container"
-                ]
+                "selectors": [".main-container"]
             },
             {
                 "label": "Carrinho",
@@ -139,17 +110,13 @@
                     ".fb-page",
                     "#__bs_notify_"
                 ],
-                "selectors": [
-                    ".main-container"
-                ]
+                "selectors": [".main-container"]
             },
             {
                 "label": "Catalogo",
                 "cookiePath": "backstop_data/engine_scripts/cookies.json",
                 "url": "/cameras",
-                "selectors": [
-                    ".main-container"
-                ],
+                "selectors": [".main-container"],
                 "removeSelectors": [
                     ".banner-js-container",
                     ".banner",

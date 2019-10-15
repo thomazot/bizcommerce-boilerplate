@@ -58,12 +58,6 @@ a, button, input, select, textarea, .order-status:after, .order-status .ico, .os
     content: ''
 
 /* Estrutura */
-.wrapper-container
-    padding-top: 8.5rem
-
-.wrapper
-    padding: 0 1rem
-
 .wrapper > *:not(:last-child), .header-container > *:not(:last-child), .main-container > *:not(:last-child), .col-main > *:not(:last-child), .sidebar > *:not(:last-child), .footer-container > *:not(:last-child), .footer > *:not(:last-child)
     margin-bottom: 1rem
 
@@ -75,6 +69,11 @@ a, button, input, select, textarea, .order-status:after, .order-status .ico, .os
 /* Tamanho mínimo do conteúdo = ~ Altura da tela - (Cabeçalho + Margens) */
 .main-container
     min-height: calc(100vh - 9.5rem)
+
+
+.col-main
+    flex: 1
+    min-width: 0
 
 /* Flex Grid */
 .flex
@@ -2842,9 +2841,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
     background: #fff
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2)
 
-.header-container .categories:not(.categories--mini)
-    padding: 0 1rem
-    margin: 0 -1rem
 
 .header
     padding-top: 1rem
@@ -2866,7 +2862,7 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 .footer-container
     background: linear-gradient(color1_bg, color1_bg_hover)
     padding: 1rem 0
-    margin: 4rem -1rem 0
+    margin: 4rem 0 0
 
 .footer
     color: color1_font
@@ -2918,10 +2914,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 
 .footer .socials
     padding-top: 1rem
-
-/* Home */
-.cms-home .header-container + .banner
-    margin: -1rem -1rem 1rem
 
 /* Catálogo */
 .category-description
@@ -9120,19 +9112,11 @@ table .change-product-link:hover
 /* ------ Estrutura */
 /* ~992px */
 @media (max-width: 62rem)
-    .wrapper-container
-        padding-top: 5.75rem
-
     .sidebar
         position: fixed
         top: -9999px
         left: -9999px
         z-index: 9999
-
-/* ~568px */
-@media (max-width: 35.5rem)
-    .wrapper-container
-        padding-top: 4rem
 
 /* ------ Formulários */
 /* ~568px */
@@ -9974,9 +9958,6 @@ table .change-product-link:hover
 
     .catalog-product-view .breadcrumb
         display: none
-
-    .catalog-product-view .wrapper-container
-        padding-top: 3rem
 
     .product-collateral > *:not(:last-child)
         margin-bottom: 0
