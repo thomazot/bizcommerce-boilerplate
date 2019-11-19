@@ -1,6 +1,6 @@
 {
     "protocol": "http",
-    "host": "oculosmarcapropria.loja.biz",
+    "host": "layoutmistore.loja.biz",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,
