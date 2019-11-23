@@ -4,9 +4,6 @@
  * Update:   07/2018
  */
 /* Geral */
-html {
-  background: #f9f9f9;
-}
 input,
 select,
 textarea {
@@ -10534,10 +10531,6 @@ table .change-product-link:hover {
     margin-left: -1rem;
     margin-right: -1rem;
   }
-  .footer {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 /* ~768px */
 @media (max-width: 48rem) {
@@ -11889,16 +11882,19 @@ table .change-product-link:hover {
   }
 }
 
+.container,
+.header,
+.main-container,
+.footer {
+  width: 61.25rem;
+  max-width: calc(100% - 32px);
+  margin-left: auto;
+  margin-right: auto;
+}
 /*
  * Global
  * Elementos globais que podem ser extendidos ao longo do documento
  */
-.container {
-  min-width: 0;
-  max-width: 980px;
-  margin: 0 auto;
-  width: auto;
-}
 /*
  * Base
  * Estilo base do elementos do Html
@@ -11939,14 +11935,6 @@ body {
   border: 1px solid #f7be07;
   background: #f9f0d5;
   color: #f7be07;
-}
-.header,
-.main-container,
-.footer {
-  width: 61.25rem;
-  max-width: calc(100% - gap);
-  margin-left: auto;
-  margin-right: auto;
 }
 .categories .ul--0 {
   max-width: 980px;
@@ -12022,14 +12010,15 @@ body {
   height: 3rem;
 }
 
+#banner__ruler .banner__wrapper {
+  width: 61.25rem;
+  max-width: calc(100% - 32px);
+  margin-left: auto;
+  margin-right: auto;
+}
 #banner__ruler {
   font-size: 0.63rem;
   font-weight: semi-bold;
   background: #ff5d00;
   color: #fff;
-}
-#banner__ruler .banner__wrapper {
-  width: 61.25rem !important;
-  max-width: calc(100% - 32px);
-  margin: 0 auto;
 }

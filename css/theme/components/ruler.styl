@@ -4,8 +4,6 @@
     background: color1_bg
     color: #fff
 
-    .banner
+    & .banner
         &__wrapper
-            width: viewport !important
-            max-width: calc(100% - 32px)
-            margin: 0 auto
+            @extend $container

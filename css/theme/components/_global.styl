@@ -3,10 +3,7 @@
  * Elementos globais que podem ser extendidos ao longo do documento
  */
 .container
-    min-width: 0
-    max-width: viewport
-    margin: 0 auto
-    width: auto
+    @extend $container
 
 /*
  * Base
@@ -52,10 +49,7 @@ body
 
 // Container
 .header, .main-container, .footer
-    width: viewport
-    max-width: calc(100% - gap)
-    margin-left: auto
-    margin-right: auto
+    @extend $container
 
 .categories .ul--0
     max-width: viewport

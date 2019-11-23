@@ -26,7 +26,7 @@ bold = 700
  * Mixin - Viewport
  */
 viewport = 980px
-gap = 30px
+gap = 32px
 /**
  * Mixin - Responsive
  * @media (max-width screen-sm-min)
@@ -42,3 +42,9 @@ screen-sm = 768px
 screen-md = 992px
 // Medium devices (desktops, 1200px and down)
 screen-lg = 1200px
+
+$container
+    width: viewport
+    max-width: 'calc(100% - %s)' % gap
+    margin-left: auto
+    margin-right: auto
