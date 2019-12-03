@@ -30,3 +30,4 @@ node_modules
 .DS_Store
 
 backstop_data/bitmaps_test
+yarn.lock

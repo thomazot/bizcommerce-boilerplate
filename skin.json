@@ -1,6 +1,6 @@
 {
     "protocol": "http",
-    "host": "layoutmistore.loja.biz",
+    "host": "malasmundi.loja.biz",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,
