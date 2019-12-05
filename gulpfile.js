@@ -95,7 +95,11 @@ gulp.task('svg', function() {
 })
 
 gulp.task('prod', function() {
-    gulp.src(['css/main/*.styl', './css/theme/components/**/*.styl'])
+    gulp.src([
+        'css/main/*.styl',
+        './css/theme/components/**/*.styl',
+        './css/theme/pages/**/*.styl',
+    ])
         .pipe(
             stylus({
                 'include css': true,
@@ -115,7 +119,11 @@ gulp.task('prod', function() {
 })
 
 gulp.task('dev', function() {
-    gulp.src(['css/main/*.styl', './css/theme/components/**/*.styl'])
+    gulp.src([
+        'css/main/*.styl',
+        './css/theme/components/**/*.styl',
+        './css/theme/pages/**/*.styl',
+    ])
         .pipe(
             stylus({
                 'include css': true,
