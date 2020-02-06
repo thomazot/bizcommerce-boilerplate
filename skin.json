@@ -1,6 +1,6 @@
 {
     "protocol": "http",
-    "host": "zenoficial.loja.biz",
+    "host": "oticagreen.loja.biz",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,

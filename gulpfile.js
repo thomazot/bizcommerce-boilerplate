@@ -53,6 +53,7 @@ function loadbrowserSync() {
             proxy: [protocol, host].join('://'),
             serveStatic: require('./server/static'),
             middleware: require('./server/routes'),
+            open: true,
         },
         function() {
             console.log('Altere o arquivo css/theme/general.styl para testar')
