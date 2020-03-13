@@ -1,6 +1,6 @@
 {
     "protocol": "http",
-    "host": "oticagreen.loja.biz",
+    "host": "ohvely.loja.biz",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,
