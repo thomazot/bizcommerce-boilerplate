@@ -3,7 +3,25 @@
  * Elementos globais que podem ser extendidos ao longo do documento
  */
 .container
-    @extend $container
+    container()
+
+:root
+    --primary: color1_bg
+    --primary-hover: color1_bg_hover
+    --primary-contrast: color1_font
+    --primary-contrast-hover: color1_font_hover
+    --secundary: color2_bg
+    --secundary-hover: color2_bg_hover
+    --secundary-contrast: color2_font
+    --secundary-contrast-hover: color2_font_hover
+    // Socials
+    --youtube: #cc0404
+    --facebook: #3b5998
+    --twitter: #00aced
+    --pinterest: #cb2027
+    --thumblr: #32506d
+    --linkedin: #007bb5
+    --instagram: #e4405f
 
 /*
  * Base
@@ -49,7 +67,7 @@ body
 
 // Container
 .header, .main-container, .footer
-    @extend $container
+    container()
 
 .categories .ul--0
     max-width: viewport
