@@ -1,6 +1,6 @@
 {
     "protocol": "http",
-    "host": "ohvely.loja.biz",
+    "host": "temabeauty.loja.biz",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,
