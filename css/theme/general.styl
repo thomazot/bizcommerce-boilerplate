@@ -3,15 +3,15 @@
  * Mixins
  */
 icon(i)
+    content: i
+    text-transform: none
+    font-weight: normal
+    font-style: normal
+    font-variant: normal
     font-family: 'biz_icons'
     speak: none
-    font-style: normal
-    font-weight: normal
-    font-variant: normal
-    text-transform: none
     -moz-osx-font-smoothing: grayscale
     -webkit-font-smoothing: antialiased
-    content: i
 
 /**
  * Mixin - Font-weight
@@ -29,22 +29,36 @@ viewport = 980px
 gap = 32px
 /**
  * Mixin - Responsive
- * @media (max-width screen-sm-min)
- * @media (max-width screen-md-min)
- * @media (max-width screen-lg-min)
  */
-screen-xxs = 320px
-// Small devices (phones, 568px and down)
-screen-xs = 568px
-// Small devices (tablets, 768px and down)
-screen-sm = 768px
-// Medium devices (desktops, 992px and down)
-screen-md = 992px
-// Medium devices (desktops, 1200px and down)
-screen-lg = 1200px
+screen-sm = 569px
+screen-md = 769px
+screen-lg = 993px
+screen-sm-max = (screen-sm - 1)
+screen-md-max = (screen-md - 1)
+screen-lg-max = (screen-lg - 1)
+
+minw(w)
+    return unquote('(min-width:' + w + ')')
+
+maxw(w)
+    return unquote('(max-width:' + w + ')')
+
+media-min-sm = minw(screen-sm)
+media-min-md = minw(screen-md)
+media-min-lg = minw(screen-lg)
+media-max-sm = maxw(screen-sm-max)
+media-max-md = maxw(screen-md-max)
+media-max-lg = maxw(screen-lg-max)
 
 container()
-    width: viewport
-    max-width: 'calc(100% - %s)' % gap
-    margin-left: auto
     margin-right: auto
+    margin-left: auto
+    max-width: 'calc(100% - %s)' % gap
+    width: viewport
+
+shadowBorder()
+    @media media-min-lg
+        box-shadow: 800px 0 0 @background, -800px 0 0 @background
+
+    @media media-max-lg
+        box-shadow: 300px 0 0 @background, -300px 0 0 @background
