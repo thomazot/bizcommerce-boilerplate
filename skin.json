@@ -1,6 +1,6 @@
 {
     "protocol": "http",
-    "host": "globalmar.loja.biz",
+    "host": "nexybrand.loja.biz",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,
