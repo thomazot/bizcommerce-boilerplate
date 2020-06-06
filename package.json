@@ -24,7 +24,8 @@
         "start": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp watch",
         "deploy": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp prod",
         "svg": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp svg",
-        "svg-min": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp svg-min"
+        "svg-min": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp svg-min",
+        "imagemin": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp imagemin"
     },
     "keywords": [
         "bizcommerce",
@@ -41,9 +42,15 @@
         "@webcomponents/webcomponentsjs": "^2.0.0",
         "autoprefixer": "^9.0.1",
         "browser-sync": "^2.26.3",
+        "gulp-cache": "^1.1.3",
         "gulp-concat": "^2.6.1",
+        "gulp-imagemin": "^7.1.0",
         "gulp-postcss": "^7.0.0",
         "gulp-svgo": "^2.2.1",
+        "imagemin-giflossy": "^5.1.10",
+        "imagemin-mozjpeg": "^9.0.0",
+        "imagemin-pngquant": "^9.0.0",
+        "imagemin-zopfli": "^7.0.0",
         "postcss": "^6.0.23",
         "postcss-pxtorem": "^4.0.1",
         "rollup": "^0.62.0"
