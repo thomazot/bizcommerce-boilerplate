@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     backstop = require('backstopjs'),
     url = require('url'),
     concat = require('gulp-concat'),
-    path = require('path')
+    path = require('path'),
+    svgo = require('gulp-svgo')
 
 var config = require('./skin')
 var { rootValue, unitPrecision } = config.pxtorem
@@ -55,23 +56,49 @@ function loadbrowserSync() {
             middleware: require('./server/routes'),
             open: true,
         },
-        function() {
+        function () {
             console.log('Altere o arquivo css/theme/general.styl para testar')
         }
     )
 }
 
-gulp.task('svg-min', function() {
+gulp.task('svg-min', function () {
     gulp.src('svg/*.svg')
         .pipe(
             svgmin({
-                plugins: [{ removeStyleElement: true }],
+                plugins: [
+                    { removeEmptyContainers: true },
+                    { removeEmptyText: true },
+                    { removeStyleElement: true },
+                    { removeViewBox: false },
+                    {
+                        removeUselessStrokeAndFill: {
+                            removeNone: true,
+                        },
+                    },
+                    { removeEmptyAttrs: true },
+                    { removeTitle: true },
+                    {
+                        removeAttrs: {
+                            attrs: [
+                                'xmlns',
+                                'id',
+                                'data-name',
+                                'class',
+                                'fill',
+                                'defs',
+                                'style',
+                            ],
+                        },
+                    },
+                ],
             })
         )
+        .pipe(svgo())
         .pipe(gulp.dest('./svg'))
 })
 
-gulp.task('svg', function() {
+gulp.task('svg', function () {
     // More complex configuration example
     const config = {
         svg: {
@@ -90,12 +117,10 @@ gulp.task('svg', function() {
         },
     }
 
-    gulp.src('svg/*.svg')
-        .pipe(svgSprite(config))
-        .pipe(gulp.dest('templates'))
+    gulp.src('svg/*.svg').pipe(svgSprite(config)).pipe(gulp.dest('templates'))
 })
 
-gulp.task('prod', function() {
+gulp.task('prod', function () {
     gulp.src([
         'css/main/*.styl',
         './css/theme/components/**/*.styl',
@@ -119,7 +144,7 @@ gulp.task('prod', function() {
         .pipe(gulp.dest('./css'))
 })
 
-gulp.task('dev', function() {
+gulp.task('dev', function () {
     gulp.src([
         'css/main/*.styl',
         './css/theme/components/**/*.styl',
@@ -148,15 +173,15 @@ gulp.task('dev', function() {
         .pipe(browserSync.stream())
 })
 
-gulp.task('copy-css', function() {
+gulp.task('copy-css', function () {
     gulp.src('./css/one.css').pipe(gulp.dest('./dist'))
 })
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     var stylus = gulp.watch('**/*.styl', ['dev'])
     loadbrowserSync()
 
-    stylus.on('change', function(event) {
+    stylus.on('change', function (event) {
         console.log(
             'File ' + event.path + ' was ' + event.type + ', running tasks...'
         )

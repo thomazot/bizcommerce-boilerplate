@@ -22,7 +22,9 @@
         "cart": "npm run cart:bundle && npm run cart:transpile",
         "components": "npm run cart && npm run button",
         "start": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp watch",
-        "deploy": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp prod"
+        "deploy": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp prod",
+        "svg": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp svg",
+        "svg-min": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp svg-min"
     },
     "keywords": [
         "bizcommerce",
@@ -41,6 +43,7 @@
         "browser-sync": "^2.26.3",
         "gulp-concat": "^2.6.1",
         "gulp-postcss": "^7.0.0",
+        "gulp-svgo": "^2.2.1",
         "postcss": "^6.0.23",
         "postcss-pxtorem": "^4.0.1",
         "rollup": "^0.62.0"
