@@ -309,30 +309,30 @@ button:hover .ico {
 }
 .btn--remove:before {
   display: block;
+  content: '\f014';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f014';
 }
 .btn--remove span {
   display: none;
 }
 .btn--close:before {
   display: block;
+  content: '\f00d';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f00d';
 }
 .btn--close span {
   display: none;
@@ -343,15 +343,15 @@ button:hover .ico {
   justify-content: space-between;
 }
 .btn--back:before {
+  content: '\f104';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f104';
   margin-right: 1rem;
 }
 .btn--xs {
@@ -518,15 +518,15 @@ button:hover .ico {
 }
 .search__filter .label:before {
   margin-right: 1rem;
+  content: '\f0b0';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f0b0';
   color: rgba(0,0,0,0.2);
 }
 .search__filter .label:hover,
@@ -754,15 +754,15 @@ form.searchautocomplete {
   align-items: center;
 }
 .breadcrumb__home .breadcrumb__link:before {
+  content: '\f015';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f015';
   margin-right: 0.5rem;
 }
 .breadcrumb__last {
@@ -843,27 +843,27 @@ form.searchautocomplete {
   border-radius: 3px;
 }
 .newsletter .male-label:before {
+  content: '\f183';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f183';
   margin-right: 0.5em;
 }
 .newsletter .female-label:before {
+  content: '\f182';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f182';
   margin-right: 0.5em;
 }
 .newsletter .male-label:hover,
@@ -1155,15 +1155,15 @@ form.searchautocomplete {
 }
 .testimonials__form .refresh-captcha:before {
   display: inline;
+  content: '\f021';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f021';
 }
 .testimonials__form .refresh-captcha .svg-loader {
   width: 2rem;
@@ -1186,30 +1186,30 @@ form.searchautocomplete {
 }
 .testimonials__rating:before {
   display: inline-block;
+  content: '\f165';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f165';
 }
 .testimonials__rating span {
   display: none;
 }
 .positivo .testimonials__rating:before {
   color: #000;
+  content: '\f164';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f164';
 }
 /* Enquete */
 .poll__content {
@@ -1469,15 +1469,15 @@ form.searchautocomplete {
   line-height: 2.75rem;
 }
 .glossary__term-link:before {
+  content: '\f105';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f105';
   margin-right: 0.5rem;
   vertical-align: middle;
   opacity: 0.5;
@@ -2636,15 +2636,15 @@ body:not(.mobile) .categories .ul--1 {
   height: 100%;
   width: 100%;
   text-align: center;
+  content: '\f053';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f053';
   font-size: 1rem;
   text-indent: 0;
 }
@@ -2672,15 +2672,15 @@ body.ie .owl-next:before {
 .owl-next:before,
 .owl-page span {
   background: #000;
+  content: '\f054';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f054';
 }
 /* Feed RSS */
 .feeds__list {
@@ -3148,15 +3148,15 @@ body.ie .owl-next:before {
   opacity: 0.5;
 }
 .col-main .note-msg:before {
+  content: '\f119';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f119';
   margin-bottom: 1rem;
   opacity: 0.5;
   font-size: 3rem;
@@ -3286,27 +3286,27 @@ body.ie .owl-next:before {
 .pager a.previous:before {
   display: block;
   line-height: 2rem;
+  content: '\f054';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f054';
 }
 .pager a.previous:before {
   display: inline;
+  content: '\f053';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f053';
 }
 .toolbar-bottom .pager {
   display: block;
@@ -3714,15 +3714,15 @@ body.ie .owl-next:before {
 }
 .qty-wrapper .bt:before {
   display: block;
+  content: '\f077';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f077';
 }
 .qty-wrapper .bt:hover {
   background: #ddd;
@@ -3735,15 +3735,15 @@ body.ie .owl-next:before {
 }
 .qty-wrapper .bt.less:before {
   display: block;
+  content: '\f078';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f078';
 }
 .qty-wrapper .bt.type {
   display: none;
@@ -3753,15 +3753,15 @@ body.ie .owl-next:before {
 }
 .qty-wrapper .bt.type:before {
   display: inline;
+  content: '\f00c';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f00c';
 }
 .qty-wrapper .typing .bt {
   display: none;
@@ -3867,15 +3867,15 @@ body.ie .owl-next:before {
 .sharing-links .email-to-friend a:before {
   color: #fff;
   font-size: 1rem;
+  content: '\f003';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f003';
 }
 .sharing-links span {
   display: none;
@@ -4534,15 +4534,15 @@ body.safari .product-image-thumbs .thumb-link {
 .bundle__content.one-option .input-box:after {
   margin-left: 0.25rem;
   color: #000;
+  content: '\f00c';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f00c';
   flex: 0 0 auto;
 }
 .bundle .options-bundle-images {
@@ -4721,27 +4721,27 @@ tr.bundle:before {
 }
 .grouped__check:before {
   display: inline;
+  content: '\f067';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f067';
 }
 .added .grouped__check:before {
   display: inline;
+  content: '\f00c';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f00c';
 }
 .grouped .grouped-images {
   max-height: 5rem;
@@ -4880,15 +4880,15 @@ tr.bundle:before {
 .options .time-picker:before {
   color: rgba(0,0,0,0.4);
   margin-right: 0.25rem;
+  content: '\f017';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f017';
 }
 /* Baixável */
 .downloadable {
@@ -4959,15 +4959,15 @@ tr.bundle:before {
 .downloadable-sample-link:before {
   font-size: 0.8rem;
   margin-right: 0.25rem;
+  content: '\f01a';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f01a';
 }
 .downloadable-sample-link .sep {
   display: none;
@@ -4993,15 +4993,15 @@ tr.bundle:before {
 .downloadable__sample .link:before {
   font-size: 1.2rem;
   margin-right: 0.5rem;
+  content: '\f01a';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f01a';
 }
 .downloadable__sample .link:hover {
   color: #e19795;
@@ -5154,15 +5154,15 @@ tr.bundle:before {
   color: #000;
 }
 .reviews__return.success:before {
+  content: '\f00c';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f00c';
   display: block;
   margin: 0 auto 1rem;
 }
@@ -5170,15 +5170,15 @@ tr.bundle:before {
   color: #ff8469;
 }
 .reviews__return.error:before {
+  content: '\f00d';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f00d';
   display: block;
   margin: 0 auto 1rem;
 }
@@ -5214,15 +5214,15 @@ tr.bundle:before {
   margin: 0;
 }
 .review-summary label:before {
+  content: '\f005';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f005';
   display: block;
   color: rgba(0,0,0,0.1);
   transition: all 200ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -5287,15 +5287,15 @@ tr.bundle:before {
 }
 .jointsales .more:before {
   display: block;
+  content: '\f067';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f067';
 }
 .jointsales__items {
   flex: 0 0 70%;
@@ -5896,29 +5896,29 @@ table .price-box {
   flex: 0 0 auto;
   margin-right: 1rem;
   color: #999;
+  content: '\f0e0';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f0e0';
 }
 .success-content .print:before {
   flex: 0 0 auto;
   margin-right: 1rem;
   color: #999;
+  content: '\f02f';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f02f';
 }
 .success-content .print a {
   margin: 0 0.5rem;
@@ -5944,15 +5944,15 @@ table .price-box {
   transition: all 200ms ease-out;
 }
 .success-content .pagto a.boleto:before {
+  content: '\f02a';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f02a';
   margin-right: 1rem;
 }
 .success-content .pagto a:hover {
@@ -6050,15 +6050,15 @@ table .price-box {
   margin-bottom: 0.5rem;
 }
 .accountlogin__new li:before {
+  content: '\f00c';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f00c';
   margin-right: 0.5rem;
   color: #000;
 }
@@ -6303,28 +6303,28 @@ table .price-box {
 .my-account .pager ol li a.previous:before {
   display: block;
   line-height: 2rem;
+  content: '\f054';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f054';
   color: #f8a7a5;
 }
 .my-account .pager ol li a.previous:before {
   display: inline;
+  content: '\f053';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f053';
 }
 .my-orders {
   margin: 0 -0.5rem -1rem;
@@ -6468,15 +6468,15 @@ table .price-box {
   flex: 1 1 auto;
 }
 .data-range:after {
+  content: '\f073';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f073';
   margin-left: 0.5rem;
   flex: 0 0 auto;
 }
@@ -6501,15 +6501,15 @@ table .price-box {
   font-size: 0.8rem;
 }
 .tweeter a:before {
+  content: '\f099';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f099';
   color: #00aced;
 }
 #affiliateplus-sidebar .actions {
@@ -6664,15 +6664,15 @@ table .price-box {
   padding-left: 0.25rem;
   font-size: 1rem;
   color: #ca213e;
+  content: '\f00c';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f00c';
 }
 /* Painel do Cliente - Status HOLDED */
 .order-status.state-holded strong {
@@ -6879,15 +6879,15 @@ table .price-box {
   color: #ccc;
 }
 .order-date:before {
+  content: '\f133';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f133';
   font-size: 1rem;
   margin-right: 0.5rem;
 }
@@ -6999,15 +6999,15 @@ dl.order-info dt {
   position: relative;
   top: -0.13rem;
   font-size: 1.25rem;
+  content: '\f02a';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f02a';
   vertical-align: middle;
   margin-right: 0.63rem;
 }
@@ -7054,15 +7054,15 @@ dl.order-info dt {
   background: #f8a7a5;
 }
 .order-items a.link-print:before {
+  content: '\f02f';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f02f';
   margin-right: 0.31rem;
 }
 .order-items table tbody th,
@@ -7207,29 +7207,29 @@ table.tracking-table tbody td {
 }
 .my-account .btn-share:before {
   display: inline;
+  content: '\f1e0';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f1e0';
 }
 .my-account .btn-share span {
   display: none;
 }
 .my-account .btn-update:before {
+  content: '\f021';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f021';
   margin-right: -0.13rem;
 }
 .my-account .btn-update span {
@@ -7239,15 +7239,15 @@ table.tracking-table tbody td {
   text-decoration: none;
 }
 .my-account .link-edit:before {
+  content: '\f040';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f040';
   margin-right: -0.13rem;
 }
 .my-account .link-edit span {
@@ -7497,15 +7497,15 @@ table.tracking-table tbody td {
   font-size: 1rem;
 }
 .block-gift-list .title:before {
+  content: '\f06b';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f06b';
   margin-right: 0.31rem;
   color: #000;
 }
@@ -7801,15 +7801,15 @@ body.page-popup {
   display: flex;
 }
 .blogfeed_share a:before {
+  content: '\f09a';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f09a';
   color: #fff;
   margin: auto;
 }
@@ -7828,30 +7828,30 @@ body.page-popup {
 }
 .blogfeed_share a.tt-bt:before {
   display: inline;
+  content: '\f099';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f099';
 }
 .blogfeed_share a.gp-bt {
   background: #dd4b39;
 }
 .blogfeed_share a.gp-bt:before {
   display: inline;
+  content: '\f0d5';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f0d5';
 }
 .blogfeed_share a span {
   display: none;
@@ -7999,15 +7999,15 @@ body.page-popup {
   position: relative;
   top: -0.13rem;
   margin-right: 0.63rem;
+  content: '\f023';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f023';
 }
 /* Marcas */
 .all-brands-list {
@@ -8207,15 +8207,15 @@ body.page-popup {
   color: #f04a38;
   opacity: 0.5;
   font-size: 1.25rem;
+  content: '\f014';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f014';
   font-family: 'biz_icons', sans-serif;
   speak: none;
   -moz-osx-font-smoothing: grayscale;
@@ -8277,15 +8277,15 @@ body.page-popup {
   margin-left: 0.31rem;
 }
 .cotacao .qty-wrapper .qquantity-button:before {
+  content: '\f021';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f021';
   font-size: 0.88rem;
   font-family: 'biz_icons';
   color: #000;
@@ -8328,15 +8328,15 @@ body.page-popup {
 }
 #quotelist .btn-remove:before {
   font-size: 1rem;
+  content: '\f014';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f014';
 }
 .qquoteadv .introduction,
 .qquoteadv .product-details {
@@ -8454,15 +8454,15 @@ body.page-popup {
   display: inline-block;
 }
 #onepage-checkout-shipping-method-additional-load h3:before {
+  content: '\f06b';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f06b';
   color: #000;
   position: absolute;
   left: 0;
@@ -8590,15 +8590,15 @@ label[for='allow_gift_messages']:hover {
   align-items: center;
 }
 #change-product-content .quick-search:before {
+  content: '\f002';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f002';
   margin-right: 1rem;
   color: #000;
   flex: 0 0 auto;
@@ -8683,15 +8683,15 @@ table .change-product-link {
   display: inline-block;
 }
 table .change-product-link:before {
+  content: '\f021';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f021';
   margin-right: 0.25rem;
   display: inline-block;
   vertical-align: middle;
@@ -9148,15 +9148,15 @@ table .change-product-link:hover {
   position: absolute;
   right: calc(100% + 0.63rem);
   top: calc(50% - 0.63rem);
+  content: '\f060';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f060';
   display: block;
   width: 1.25rem;
   height: 1.25rem;
@@ -9238,28 +9238,28 @@ table .change-product-link:hover {
   font-size: 0.81rem;
 }
 .revendaslist .telmail li:before {
+  content: '\f095';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f095';
   margin-right: 0.44rem;
 }
 .revendaslist .telmail li.mail:before {
   display: inline;
+  content: '\f003';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f003';
 }
 .revendaslist .telmail a {
   color: #f8a7a5;
@@ -9324,28 +9324,28 @@ table .change-product-link:hover {
   margin-bottom: 0;
 }
 .arevenda .dados .contato li:before {
+  content: '\f095';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f095';
   margin-right: 0.44rem;
 }
 .arevenda .dados .contato li.mail:before {
   display: inline;
+  content: '\f003';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f003';
 }
 .arevenda .dados a {
   color: #f8a7a5;
@@ -9488,15 +9488,15 @@ table .change-product-link:hover {
 }
 .case-detail-content .bx-controls-direction a:before {
   display: block;
+  content: '\f053';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f053';
   font-size: 1rem;
   text-indent: 0;
   line-height: 1.25rem;
@@ -9509,15 +9509,15 @@ table .change-product-link:hover {
 }
 .case-detail-content .bx-controls-direction a.bx-next:before {
   display: inline;
+  content: '\f054';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f054';
 }
 .case-detail-content .bx-controls-direction a:hover {
   color: #000;
@@ -9644,15 +9644,15 @@ table .change-product-link:hover {
 }
 .step-title a:before {
   display: inline;
+  content: '\f040';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f040';
 }
 .step-title a:hover {
   background: #f8a7a5;
@@ -9670,15 +9670,15 @@ table .change-product-link:hover {
 }
 #checkout-payment-method-load > dt label:after {
   color: #ca213e;
+  content: '\f00c';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f00c';
 }
 /* Finalização - Pagamento */
 #checkout-payment-method-load > dt label:hover {
@@ -9762,15 +9762,15 @@ table .change-product-link:hover {
 }
 .osc-steps .opc-block-progress dt a:before {
   display: inline;
+  content: '\f040';
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
   font-family: 'biz_icons';
   speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  content: '\f040';
 }
 .osc-steps .opc-block-progress dt a:hover {
   background: #f8a7a5;
@@ -10024,15 +10024,15 @@ table .change-product-link:hover {
     display: none;
   }
   .categories__show:before {
+    content: '\f0c9';
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-family: 'biz_icons';
     speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    content: '\f0c9';
     position: relative;
     left: 0.09rem;
   }
@@ -10190,15 +10190,15 @@ table .change-product-link:hover {
   }
   .filters .title:before {
     display: inline;
+    content: '\f1de';
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-family: 'biz_icons';
     speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    content: '\f1de';
   }
   .filters .title span {
     display: none;
@@ -10233,15 +10233,15 @@ table .change-product-link:hover {
   }
   .filters.on .title:before {
     display: block;
+    content: '\f00d';
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-family: 'biz_icons';
     speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    content: '\f00d';
   }
   .filters__filter:not(:last-child) {
     margin-bottom: 2rem;
@@ -10638,15 +10638,15 @@ table .change-product-link:hover {
   }
   .parcelamento .title:after {
     display: block;
+    content: '\f105';
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-family: 'biz_icons';
     speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    content: '\f105';
   }
   .parcelamento ul {
     position: fixed;
@@ -10794,15 +10794,15 @@ table .change-product-link:hover {
     margin-left: auto;
   }
   .tabs__tab:after {
+    content: '\f105';
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-family: 'biz_icons';
     speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    content: '\f105';
     margin-left: auto;
   }
   .tabs__content {
@@ -10847,15 +10847,15 @@ table .change-product-link:hover {
   .whosaw__title:after,
   .jointsales__title:after,
   .upsell__title:after {
+    content: '\f105';
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-family: 'biz_icons';
     speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    content: '\f105';
     margin-left: auto;
   }
   .related__content,
@@ -10952,15 +10952,15 @@ table .change-product-link:hover {
     align-items: center;
   }
   .reviews__title:after {
+    content: '\f123';
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-family: 'biz_icons';
     speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    content: '\f123';
     margin-left: auto;
   }
   .reviews__content {
@@ -11039,15 +11039,15 @@ table .change-product-link:hover {
   }
   .add-to-links .link-wishlist a:after {
     display: inline;
+    content: '\f004';
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-family: 'biz_icons';
     speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    content: '\f004';
   }
   .add-to-links .link-compare a:after {
     content: '\f012';
@@ -11887,10 +11887,10 @@ table .change-product-link:hover {
  * Elementos globais que podem ser extendidos ao longo do documento
  */
 .container {
-  width: 61.25rem;
-  max-width: calc(100% - 32px);
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  max-width: calc(100% - 32px);
+  width: 61.25rem;
 }
 :root {
   --primary: #000;
@@ -11901,6 +11901,14 @@ table .change-product-link:hover {
   --secundary-hover: #e19795;
   --secundary-contrast: #fff;
   --secundary-contrast-hover: #fff;
+  --tertiary: #ccc;
+  --tertiary-hover: #f7f7f7;
+  --tertiary-contrast: #fff;
+  --tertiary-contrast-hover: #fff;
+  --button: #ca213e;
+  --button-hover: #900;
+  --button-contrast: #fff;
+  --button-contrast-hover: #fff;
   --youtube: #cc0404;
   --facebook: #3b5998;
   --twitter: #00aced;
@@ -11931,8 +11939,8 @@ body {
  */
 .messages > li {
   display: block;
-  padding: 0.63rem 1.25rem;
   margin-bottom: 1.25rem;
+  padding: 0.63rem 1.25rem;
   font-size: 0.88rem;
 }
 .messages .success-msg {
@@ -11953,13 +11961,16 @@ body {
 .header,
 .main-container,
 .footer {
-  width: 61.25rem;
-  max-width: calc(100% - 32px);
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  max-width: calc(100% - 32px);
+  width: 61.25rem;
 }
 .categories .ul--0 {
   max-width: 980px;
+}
+.wrapper svg {
+  fill: currentColor;
 }
 
 .cms-home .header-container + .banner {
@@ -11978,20 +11989,20 @@ body {
   }
   .categories .parent > a {
     display: flex;
-    min-height: 48px;
     justify-content: flex-start;
     align-items: center;
+    min-height: 48px;
   }
   .categories .parent:after {
+    content: '\f054';
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-family: 'biz_icons';
     speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    content: '\f054';
     position: absolute;
     top: 0;
     right: 0;
@@ -12001,8 +12012,8 @@ body {
     align-items: center;
     width: 3rem;
     height: 3rem;
+    background: var(--primary-contrast);
     font-size: 1.25rem;
-    background: rgba(255,255,255,0.1);
     transition: all 0.2s ease;
   }
   .categories .parent.on:after {
@@ -12017,17 +12028,17 @@ body {
 }
 @media (min-width: 993px) {
   .categories {
-    margin-bottom: 0 !important;
-    background: none;
     flex: 1;
+    margin-bottom: 0 !important;
     min-width: 0;
+    background: none;
   }
   .categories .a--0 {
     color: var(--primary);
-    white-space: nowrap;
-    font-size: 0.88rem;
-    font-weight: 600;
     text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 0.88rem;
   }
   .categories .li--0 {
     order: 1;
@@ -12048,6 +12059,10 @@ body {
   height: 3rem;
 }
 
-.search {
-  display: none;
+@media (max-width: 992px) {
+  .catalog-category-view .main-container,
+  .catalogsearch-result-index .main-container {
+    position: static;
+  }
 }
+

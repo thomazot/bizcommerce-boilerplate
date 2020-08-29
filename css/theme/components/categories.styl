@@ -1,4 +1,4 @@
-@media (max-width: 992px)
+@media media-max-lg
     .categories
         .parent
             position: relative
@@ -11,12 +11,13 @@
 
             > a
                 display: flex
-                min-height: 48px
                 justify-content: flex-start
                 align-items: center
+                min-height: 48px
 
             &:after
                 icon('\f054')
+
                 position: absolute
                 top: 0
                 right: 0
@@ -26,9 +27,9 @@
                 align-items: center
                 width: 48px
                 height: 48px
+                background: var(--primary-contrast)
                 font-size: 20px
-                background: rgba(255, 255, 255, 0.1)
-                transition: all 0.2s ease
+                transition: all .2s ease
 
             &.on
                 &:after
@@ -40,19 +41,19 @@
         .all-li--0
             padding-bottom: 0
 
-@media (min-width: 993px)
+@media media-min-lg
     .categories
-        margin-bottom: 0 !important
-        background: none
         flex: 1
+        margin-bottom: 0 !important
         min-width: 0
+        background: none
 
         .a--0
             color: var(--primary)
-            white-space: nowrap
-            font-size: 14px
-            font-weight: semibold
             text-transform: uppercase
+            white-space: nowrap
+            font-weight: semibold
+            font-size: 14px
 
         .li--0
             order: 1
