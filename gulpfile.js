@@ -95,7 +95,7 @@ gulp.task('svg-min', function () {
             })
         )
         .pipe(svgo())
-        .pipe(gulp.dest('./svg'))
+        .pipe(gulp.dest('./svg/optimize'))
 })
 
 gulp.task('svg', function () {
@@ -117,7 +117,9 @@ gulp.task('svg', function () {
         },
     }
 
-    gulp.src('svg/*.svg').pipe(svgSprite(config)).pipe(gulp.dest('templates'))
+    gulp.src('svg/optimize/*.svg')
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('templates'))
 })
 
 gulp.task('prod', function () {
@@ -189,47 +191,53 @@ gulp.task('watch', function () {
     var stylus = gulp.watch('./css/*.styl', ['dev'])
 })
 
-
-// Optimize Images 
-var cache = require('gulp-cache');
-var imagemin = require('gulp-imagemin');
-var imageminPngquant = require('imagemin-pngquant');
-var imageminZopfli = require('imagemin-zopfli');
-var imageminMozjpeg = require('imagemin-mozjpeg'); //need to run 'brew install libpng'
-var imageminGiflossy = require('imagemin-giflossy');
+// Optimize Images
+var cache = require('gulp-cache')
+var imagemin = require('gulp-imagemin')
+var imageminPngquant = require('imagemin-pngquant')
+var imageminZopfli = require('imagemin-zopfli')
+var imageminMozjpeg = require('imagemin-mozjpeg') //need to run 'brew install libpng'
+var imageminGiflossy = require('imagemin-giflossy')
 //compress all images
-gulp.task('imagemin', function() {
-    return gulp.src(['img/**/*.{gif,png,jpg}'])
-        .pipe(cache(imagemin([
-            //png
-            imageminPngquant({
-                speed: 1,
-                quality: [0.95, 1] //lossy settings
-            }),
-            imageminZopfli({
-                more: true
-                // iterations: 50 // very slow but more effective
-            }),
+gulp.task('imagemin', function () {
+    return gulp
+        .src(['img/**/*.{gif,png,jpg}'])
+        .pipe(
+            cache(
+                imagemin([
+                    //png
+                    imageminPngquant({
+                        speed: 1,
+                        quality: [0.95, 1], //lossy settings
+                    }),
+                    imageminZopfli({
+                        more: true,
+                        // iterations: 50 // very slow but more effective
+                    }),
 
-            imageminGiflossy({
-                optimizationLevel: 3,
-                optimize: 3, //keep-empty: Preserve empty transparent frames
-                lossy: 2
-            }),
-            //svg
-            imagemin.svgo({
-                plugins: [{
-                    removeViewBox: false
-                }]
-            }),
-            //jpg lossless
-            // imagemin.jpegtran({
-            //     progressive: true
-            // }),
-            //jpg very light lossy, use vs jpegtran
-            imageminMozjpeg({
-                quality: 90
-            })
-        ])))
-        .pipe(gulp.dest('optimize'));
-});
+                    imageminGiflossy({
+                        optimizationLevel: 3,
+                        optimize: 3, //keep-empty: Preserve empty transparent frames
+                        lossy: 2,
+                    }),
+                    //svg
+                    imagemin.svgo({
+                        plugins: [
+                            {
+                                removeViewBox: false,
+                            },
+                        ],
+                    }),
+                    //jpg lossless
+                    // imagemin.jpegtran({
+                    //     progressive: true
+                    // }),
+                    //jpg very light lossy, use vs jpegtran
+                    imageminMozjpeg({
+                        quality: 90,
+                    }),
+                ])
+            )
+        )
+        .pipe(gulp.dest('optimize'))
+})
