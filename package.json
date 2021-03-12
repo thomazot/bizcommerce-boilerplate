@@ -23,6 +23,7 @@
         "components": "npm run cart && npm run button",
         "start": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp watch",
         "deploy": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp prod",
+        "presvg": "yarn svg-min",
         "svg": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp svg",
         "svg-min": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp svg-min",
         "imagemin": "source $HOME/.nvm/nvm.sh; nvm use 10; npx gulp imagemin"
