@@ -1,0 +1,75 @@
+.filters
+    --color: #323348
+
+    > .title
+        @media media-min-lg
+            display: none
+
+    .link, .a--0
+        color: var(--color)
+
+        .label
+            font-weight: regular
+            font-size: 12px
+
+        .count
+            display: none
+
+    @media media-max-lg
+        &__name, .link, .a--0
+            color: var(--primary-contrast)
+
+    @media media-min-lg
+        .ul--0
+            overflow-y: auto
+            max-height: 300px
+
+            &::-webkit-scrollbar
+                width: 4px
+                border-radius: 4px
+
+            &::-webkit-scrollbar-track
+                border-radius: 4px
+                background: var(--color-border)
+
+            &::-webkit-scrollbar-thumb
+                border-radius: 4px
+                background: var(--primary)
+
+        &__filter
+            border-radius: var(--border-radius)
+            box-shadow: 0 0 0 1px var(--color-border)
+
+            &:hover
+                box-shadow: 0 0 0 1px var(--color-border)
+
+            > ol, > .ul--0, > .filters__swatches
+                display: none
+                padding-top: 16px
+
+            &.on
+                > ol, > .ul--0, > .filters__swatches
+                    display: block
+
+                .filters__name:after
+                    background-image: url(more)
+
+        &__name
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 0
+            color: var(--primary)
+            font-weight: medium
+            font-size: 18px
+            cursor: pointer
+
+            &:after
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 16px
+                height: 16px
+                background: url(less) no-repeat center center
+                content: ''
+                font-size: 30px

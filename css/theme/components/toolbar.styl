@@ -1,0 +1,54 @@
+.toolbar
+    --bg: #F6F6F6
+    --color: #999999
+
+    @media media-max-lg
+        display: block
+
+    .sort-by
+        label
+            color: var(--color)
+            font-weight: medium
+            font-size: 12px
+            opacity: 1
+
+        select
+            padding: 0 32px 0 16px
+            width: 190px
+            height: 40px
+            border: 0
+            border-radius: var(--border-radius)
+            background: var(--bg) url(down) no-repeat center right 16px
+            box-shadow: none
+            color: var(--primary)
+            font-weight: medium
+            font-size: 12px
+            appearance: none
+
+    &:before
+        flex: 1
+        min-width: 0
+        color: var(--primary)
+        content: attr(data-title)
+        font-weight: medium
+        font-size: 24px
+        line-height: 28px
+
+        @media media-max-lg
+            display: block
+            padding-bottom: 16px
+
+    .amount, .limiter
+        display: none
+
+    .view-mode
+        label
+            display: block
+            margin-right: 5px
+            color: var(--color)
+            font-weight: medium
+            font-size: 12px
+
+        svg
+            width: 17px
+            height: 17px

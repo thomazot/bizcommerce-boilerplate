@@ -13,6 +13,17 @@
             &-prev
                 left: -30px
 
+    &__content
+        display: flex
+        justify-content: space-between
+
+        @media media-max-sm
+            display: block
+
+        .products__footer
+            align-self: flex-end
+            width: 175px
+
     &__item
         display: block
 
@@ -43,6 +54,18 @@
 
                 .products__name
                     border-bottom-color: var(--primary)
+
+    &--list
+        .products
+            &__header
+                margin-right: gap
+
+                @media media-max-sm
+                    width: 30%
+
+            &__case
+                padding: 0
+                box-shadow: none
 
     &__categories
         .product-categories-list

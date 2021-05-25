@@ -1228,7 +1228,7 @@ $j.fn.neonTheme.custom = {
     fix_IE_SVGs: true, // corrige as dimensões de SVGs inline no IE
     fix_zoomHeader: true, // corrige o z-index do .header e do zoom dos produtos no :hover de cada um
     fix_address_phone: true, // corrige a exibição do ícone de telefone nas listagens de endereços
-    fix_category_description: true, // troca a posição padrão da descrição da categoria
+    fix_category_description: false, // troca a posição padrão da descrição da categoria
     fix_catalog_flexbox: true, // adiciona elementos para arrumar o flexbox do catálogo
     /* - Responsivo */
     m_categories: true, // ativa o responsivo do Menu de Categorias
@@ -1458,6 +1458,26 @@ $j(document)
             navigationText: ['?', '?'],
             pagination: true,
         })
+
+        $('.filters__name').click(function () {
+            $(this).parent('.filters__filter').toggleClass('on')
+        })
+
+        const categoryTitle = $('.catalog-category-view .page-title')
+
+        if (categoryTitle.length) {
+            if (categoryTitle.next().next('.toolbar').length) {
+                categoryTitle
+                    .next()
+                    .next('.toolbar')
+                    .attr('data-title', $.trim(categoryTitle.text()))
+            }
+        }
+
+        const categoryBanner = $('.category-image')
+        if (categoryBanner.length) {
+            $('.header-container').after(categoryBanner)
+        }
     })
     .on('resizeStop', function (e) {
         // Safe window.resize
