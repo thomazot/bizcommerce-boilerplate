@@ -1,0 +1,82 @@
+.reviews
+    --bg: rgba(#DCDCDC, .1)
+
+    @media media-min-lg
+        padding: 40px 0
+        background: var(--bg)
+
+        shadowBorder()
+
+    &__resume, &__ratings, &__add
+        padding: 0
+        background: none
+        box-shadow: none
+
+    .subtitle
+        color: var(--color-text)
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 14px
+
+    &__add
+        .subtitle
+            color: var(--primary)
+
+        .title
+            color: var(--color-text)
+            font-weight: regular
+            font-size: 14px
+            line-height: 23px
+
+            span
+                display: block
+                font-weight: bold
+
+        .review-summary
+            justify-content: flex-start
+
+            label
+                font-size: 24px !important
+
+            .hover label:before
+                color: var(--primary)
+
+        .form-list label
+            color: var(--color-text)
+            font-weight: medium
+            font-size: 14px
+
+        textarea, input
+            border: solid 1px var(--color-border)
+            border-radius: var(--border-radius)
+            box-shadow: none
+
+        .btn
+            height: 48px
+
+    &__no-reviews
+        color: var(--text-color)
+        text-transform: uppercase
+
+        p
+            display: inline
+
+        .be-first
+            color: var(--color-text)
+            font-weight: regular
+
+    &__resume
+        .rating-box
+            display: none !important
+
+        .product-rate .amount
+            width: 100%
+            color: var(--color-text)
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 12px
+            opacity: 1
+
+@media media-max-lg
+    .reviews .subtitle
+        border: 0

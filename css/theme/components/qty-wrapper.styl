@@ -1,0 +1,62 @@
+qty-height = 42px
+qty-background = #F2F2F2
+qty-color = #919799
+qty-input = #232E32
+
+.qty-wrapper
+    border-radius: var(--border-radius) 0 0 var(--border-radius)
+    background: qty-background
+
+    .bt-box
+        display: contents
+
+    .input-box
+        display: flex
+        align-items: stretch
+        height: qty-height
+
+    input
+        flex: 1
+        padding: 0
+        min-width: 20px
+        width: auto
+        height: 100%
+        border: 0
+        background: none
+        box-shadow: none
+        color: qty-input
+        font-weight: bold
+        font-size: 16px
+
+    .bt.less, .bt.plus
+        display: flex
+        flex: 0 0 30px
+        justify-content: center
+        align-items: center
+        padding: 0 8px
+        height: auto
+        border-radius: 0
+        background: none
+        color: qty-color
+        font-weight: bold
+        font-size: 16px
+
+        &:before
+            display: none
+
+        span
+            display: flex
+            justify-content: center
+            align-items: center
+            line-height: 1
+
+        &:hover
+            background: @background
+            color: var(--primary)
+
+    .less
+        order: -1
+
+    .prod__shop &
+        position: static
+        transform: none

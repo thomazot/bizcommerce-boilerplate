@@ -3395,24 +3395,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 .sharing-links a:hover
     opacity: .8
 
-.sharing-links .tt-share a
-    background: #00aced
-
-.sharing-links .gp-share a
-    background: #dd4b39
-
-.sharing-links .wa-share a
-    background: #4dc247
-
-.sharing-links .pt-share a
-    background: #cb2027
-
-.sharing-links .tb-share a
-    background: #32506d
-
-.sharing-links .lk-share a
-    background: #007bb5
-
 .sharing-links .email-to-friend a
     background: color1_bg
 
@@ -3460,25 +3442,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 
 .add-to-cart-btn.no-qty
     padding: 0 1rem
-
-/* @links */
-.add-to-links li:not(:last-child)
-    margin-bottom: .25rem
-
-.add-to-links a
-    display: block
-    padding: .5rem
-    border-radius: 3px
-    background: #fff
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1)
-    color: rgba(0, 0, 0, .7)
-    text-align: center
-    font-weight: 600
-    font-size: .8rem
-
-.add-to-links a:hover
-    background: color1_bg
-    color: color1_font
 
 /* @fotos */
 .product-image-gallery
@@ -3754,7 +3717,6 @@ body.safari .product-image-thumbs .thumb-link
 
 .frete__form .input-text
     flex: 1 1 auto
-    border-radius: 0 !important
 
 .frete__results
     position: relative
@@ -3915,18 +3877,6 @@ body.safari .product-image-thumbs .thumb-link
 
 .prod__shop .add-to-cart-buttons
     position: relative
-
-/* qtd */
-.prod__shop .qty-wrapper
-    position: absolute
-    top: 50%
-    left: .625rem
-    transform: translateY(-50%)
-
-.prod__shop .qty-wrapper input
-    border: 1px solid rgba(0, 0, 0, .1)
-    background: rgba(0, 0, 0, .1)
-    color: #fff
 
 /* @descricao(curta) */
 .prod__short-desc
@@ -9693,63 +9643,6 @@ table .change-product-link:hover
         margin: -1rem -1rem 1rem
         border-radius: 0
 
-    /* @simulador-frete */
-    .frete__title
-        margin: 0
-        padding: 1rem
-        border: 1px solid rgba(0, 0, 0, .1)
-        border-radius: 0
-        background: #fff
-        box-shadow: none
-        font-size: 1rem
-
-    .frete__title span{@order -1}, .frete__title .ico
-        margin: 0 0 0 auto
-
-    .frete__content
-        position: fixed
-        top: 0
-        left: 100%
-        z-index: 999
-        display: flex
-        flex-flow: column nowrap
-        justify-content: center
-        align-items: center
-        overflow-y: auto
-        padding: 1rem
-        width: 100vw
-        height: 100vh
-        background: #fff
-        transition: 600ms cubic-bezier(.23, 1, .32, 1)
-
-    .frete--open .frete__content
-        display: flex
-        transform: translateX(-100%)
-
-    .frete__hide
-        position: absolute
-        top: 0
-        right: 0
-        left: 0
-        display: block
-        margin: 0
-        border-radius: 0
-
-    .frete__results
-        position: fixed
-        top: 0
-        left: 0
-        z-index: 9999
-        display: block !important
-        overflow-y: auto
-        width: 100vw
-        height: 100vh
-        transition: 600ms cubic-bezier(.23, 1, .32, 1)
-        transform: translateY(100%)
-
-    .frete.on .frete__results
-        transform: translateY(0)
-
     /* Produto - Compre Junto */
     .jointsales .owl-buttons
         display: block
@@ -9996,45 +9889,6 @@ table .change-product-link:hover
         margin-right: -1rem
         margin-left: -1rem
         border-width: 1px 0
-
-    .frete__title
-        margin-right: -1rem
-        margin-left: -1rem
-        border-width: 0 0 1px
-
-    /* @links */
-    .add-to-links
-        margin: 0 !important
-
-    .add-to-links li:not(:last-child)
-        margin: 0
-
-    .add-to-links a
-        display: flex
-        align-items: center
-        margin: 0 -1rem
-        padding: 1rem
-        border-bottom: 1px solid rgba(0, 0, 0, .1)
-        border-radius: 0
-        box-shadow: none
-        text-align: left
-        font-weight: 400
-        font-size: 1rem
-        line-height: 1em
-
-    .add-to-links li:first-child a
-        border-top: 1px solid rgba(0, 0, 0, .1)
-
-    .add-to-links a:after
-        margin-left: auto
-
-    .add-to-links .link-wishlist a:after
-        display: inline
-
-        icon('\f004')
-
-    .add-to-links .link-compare a:after
-        content: '\f012'
 
     /* Empacotado */
     .bundle

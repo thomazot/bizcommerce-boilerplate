@@ -1,0 +1,77 @@
+.frete
+    .prod__shop &
+        margin-top: auto
+        padding-top: 20px
+        border-top: solid 1px var(--color-border)
+
+    &__title
+        display: none
+
+    &__content
+        display: block
+
+        @media media-min-lg
+            display: flex
+
+    &__form
+        label
+            display: flex
+            align-items: center
+            padding-right: 10px
+            background: none
+            box-shadow: none
+            text-transform: none
+            font-size: 0
+
+            .ico
+                margin-right: 5px
+                width: 18px
+                height: 18px
+                fill: var(--primary)
+
+            &:after
+                color: var(--color)
+                content: 'Calcule a Entrega'
+                font-weight: medium
+                font-size: 12px
+
+        .input-text
+            width: 140px
+            height: 40px
+            border: solid 1px var(--color-border)
+            border-right: 0
+            border-radius: var(--border-radius) 0 0 var(--border-radius)
+            box-shadow: none
+            color: var(--color)
+            font-size: 14px
+
+    &__actions
+        .btn
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0
+            width: 40px
+            height: 40px
+            border: solid 1px var(--color-border)
+            border-left: 0
+            background: none
+            box-shadow: none
+            color: var(--primary)
+            text-transform: capitalize
+            font-weight: medium
+            font-size: 12px
+
+    &__naosei
+        display: flex
+        align-self: start
+        padding: 5px 16px 0
+        color: var(--color)
+        font-size: 10px
+
+@media media-min-lg
+    .frete
+        &__results
+            position: absolute
+            margin-top: 20px
+            width: 100%

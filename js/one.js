@@ -98,12 +98,7 @@
          * addSVG() - defaults
          */
         if (neon.default_SVGs !== false) {
-            var truck = {
-                'img-truck': {
-                    selector: '.frete__title',
-                    mode: 'append',
-                },
-            }
+            var truck = {}
             var svgs = {
                 'img-truck': {
                     selector:
@@ -1245,13 +1240,7 @@ $j.fn.neonTheme.custom = {
      * Funcionalidades do Tema
      */
     dropFrom: false,
-    addSVG: {
-        'img-truck': {
-            selector: '.frete .frete__content .input-box label',
-            mode: 'prepend',
-            ratio: false,
-        },
-    },
+    addSVG: {},
 }
 
 /**
@@ -1478,6 +1467,24 @@ $j(document)
         if (categoryBanner.length) {
             $('.header-container').after(categoryBanner)
         }
+
+        addSVG({
+            'z-list': {
+                selector: '.add-to-links .link-wishlist a',
+                mode: 'prepend',
+            },
+            'z-truck': {
+                selector: '.frete__form label',
+                mode: 'prepend',
+            },
+        })
+
+        $('.jointsales__row').each(function () {
+            $(
+                '.jointsales__totals, .jointsales__payments, .jointsales__action',
+                this
+            ).wrapAll('<div class="jointsales__all"></div>')
+        })
     })
     .on('resizeStop', function (e) {
         // Safe window.resize
