@@ -1,5 +1,5 @@
 const path = require('path')
-const { src, watch, dest, parallel } = require('gulp'),
+const { src, watch, dest, series } = require('gulp'),
     stylus = require('gulp-stylus'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
@@ -168,14 +168,33 @@ function build(cb) {
     cb()
 }
 
+const babel = require('gulp-babel')
+const plumber = require('gulp-plumber')
+
 function javascript(cb) {
-    src('js/**/*.js').pipe(dest('./public/js')).pipe(browserSync.reload)
+    src('js/**/*.js')
+        .pipe(plumber())
+        .pipe(
+            babel({
+                presets: [
+                    [
+                        '@babel/env',
+                        {
+                            modules: false,
+                        },
+                    ],
+                ],
+            })
+        )
+        .pipe(dest('./public/js'))
+        .pipe(browserSync.reload({ stream: true }))
     cb()
 }
 
 async function buildWatch(cb) {
     await loadBrowserSync()
-    watch(['**/*.styl', 'js/**/*.js'], parallel(build, javascript))
+    watch('**/*.styl', build)
+    watch('js/**/*.js', javascript)
     cb()
 }
 
@@ -228,4 +247,4 @@ exports.build = build
 exports.svgMin = svgMin
 exports.svg = svg
 exports.imagemin = images
-exports.default = buildWatch
+exports.default = series(javascript, build, buildWatch)
