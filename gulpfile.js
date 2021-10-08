@@ -61,31 +61,15 @@ function svgMin(cb) {
     src('svg/*.svg')
         .pipe(
             svgmin({
+                multipass: true,
+                full: true,
                 plugins: [
-                    { removeEmptyContainers: true },
-                    { removeEmptyText: true },
-                    { removeStyleElement: true },
-                    { removeViewBox: false },
-                    {
-                        removeUselessStrokeAndFill: {
-                            removeNone: true,
-                        },
-                    },
-                    { removeEmptyAttrs: true },
-                    { removeTitle: true },
-                    {
-                        removeAttrs: {
-                            attrs: [
-                                'xmlns',
-                                'id',
-                                'data-name',
-                                'class',
-                                'fill',
-                                'defs',
-                                'style',
-                            ],
-                        },
-                    },
+                    'removeEmptyContainers',
+                    'removeEmptyText',
+                    'removeStyleElement',
+                    'removeUselessStrokeAndFill',
+                    'removeEmptyAttrs',
+                    'removeTitle',
                 ],
             })
         )
