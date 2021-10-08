@@ -1,6 +1,6 @@
 {
-    "protocol": "http",
-    "host": "vcpautomacao.loja.biz",
+    "protocol": "https",
+    "host": "amarelinhadecor.loja.biz",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,

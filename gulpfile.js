@@ -1,24 +1,19 @@
-var gulp = require('gulp'),
-    svgSprite = require('gulp-svg-sprite'),
+const path = require('path')
+const { src, watch, dest } = require('gulp'),
     stylus = require('gulp-stylus'),
-    svgmin = require('gulp-svgmin'),
-    gulpif = require('gulp-if'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     pxtorem = require('postcss-pxtorem'),
-    browserSync = require('browser-sync').create(),
-    path = require('path'),
-    backstop = require('backstopjs'),
-    url = require('url'),
-    concat = require('gulp-concat'),
-    path = require('path'),
+    concat = require('gulp-concat')
+const browserSync = require('browser-sync')
+const svgSprite = require('gulp-svg-sprite')
+const svgmin = require('gulp-svgmin'),
     svgo = require('gulp-svgo')
+const config = require('./skin')
+const { rootValue, unitPrecision } = config.pxtorem
+var { protocol, host } = config
 
-var config = require('./skin')
-var { rootValue, unitPrecision } = config.pxtorem
-var { protocol, host, theme } = config
-
-var processors = [
+const processors = [
     autoprefixer({
         grid: true,
         cascade: false,
@@ -47,7 +42,7 @@ var processors = [
     }),
 ]
 
-function loadbrowserSync() {
+function loadBrowserSync() {
     browserSync.init(
         {
             port: 8080,
@@ -62,8 +57,8 @@ function loadbrowserSync() {
     )
 }
 
-gulp.task('svg-min', function () {
-    gulp.src('svg/*.svg')
+function svgMin(cb) {
+    src('svg/*.svg')
         .pipe(
             svgmin({
                 plugins: [
@@ -95,11 +90,11 @@ gulp.task('svg-min', function () {
             })
         )
         .pipe(svgo())
-        .pipe(gulp.dest('./svg/optimize'))
-})
+        .pipe(dest('./svg/optimize'))
+    cb()
+}
 
-gulp.task('svg', function () {
-    // More complex configuration example
+function svg(cb) {
     const config = {
         svg: {
             xmlDeclaration: false,
@@ -117,13 +112,13 @@ gulp.task('svg', function () {
         },
     }
 
-    gulp.src('svg/optimize/*.svg')
-        .pipe(svgSprite(config))
-        .pipe(gulp.dest('templates'))
-})
+    src('svg/optimize/*.svg').pipe(svgSprite(config)).pipe(dest('./templates'))
 
-gulp.task('prod', function () {
-    gulp.src([
+    cb()
+}
+
+function deploy(cb) {
+    src([
         'css/main/*.styl',
         './css/theme/components/**/*.styl',
         './css/theme/pages/**/*.styl',
@@ -143,11 +138,12 @@ gulp.task('prod', function () {
         )
         .pipe(postcss(processors))
         .pipe(concat('one.css'))
-        .pipe(gulp.dest('./css'))
-})
+        .pipe(dest('./css'))
+    cb()
+}
 
-gulp.task('dev', function () {
-    gulp.src([
+function build(cb) {
+    src([
         'css/main/*.styl',
         './css/theme/components/**/*.styl',
         './css/theme/pages/**/*.styl',
@@ -165,62 +161,45 @@ gulp.task('dev', function () {
                 },
             })
         )
-        .on('error', (err) => {
-            console.error(err.message)
-            this.emit('end')
-        })
         .pipe(postcss(processors))
         .pipe(concat('one.css'))
-        .pipe(gulp.dest('./css'))
+        .pipe(dest('./css'))
         .pipe(browserSync.stream())
-})
+    cb()
+}
 
-gulp.task('copy-css', function () {
-    gulp.src('./css/one.css').pipe(gulp.dest('./dist'))
-})
-
-gulp.task('watch', function () {
-    var stylus = gulp.watch('**/*.styl', ['dev'])
-    loadbrowserSync()
-
-    stylus.on('change', function (event) {
-        console.log(
-            'File ' + event.path + ' was ' + event.type + ', running tasks...'
-        )
-    })
-    var stylus = gulp.watch('./css/*.styl', ['dev'])
-})
+async function buildWatch(cb) {
+    await loadBrowserSync()
+    watch('**/*.styl', build)
+    cb()
+}
 
 // Optimize Images
-var cache = require('gulp-cache')
-var imagemin = require('gulp-imagemin')
-var imageminPngquant = require('imagemin-pngquant')
-var imageminZopfli = require('imagemin-zopfli')
-var imageminMozjpeg = require('imagemin-mozjpeg') //need to run 'brew install libpng'
-var imageminGiflossy = require('imagemin-giflossy')
-//compress all images
-gulp.task('imagemin', function () {
-    return gulp
-        .src(['img/**/*.{gif,png,jpg}'])
+const cache = require('gulp-cache'),
+    imagemin = require('gulp-imagemin'),
+    imageminPngquant = require('imagemin-pngquant'),
+    imageminZopfli = require('imagemin-zopfli'),
+    imageminMozjpeg = require('imagemin-mozjpeg'),
+    imageminGiflossy = require('imagemin-giflossy')
+
+function images(cb) {
+    src('img/**/*.{gif,png,jpg}')
         .pipe(
             cache(
                 imagemin([
-                    //png
                     imageminPngquant({
                         speed: 1,
-                        quality: [0.95, 1], //lossy settings
+                        quality: [0.95, 1],
                     }),
                     imageminZopfli({
                         more: true,
-                        // iterations: 50 // very slow but more effective
                     }),
 
                     imageminGiflossy({
                         optimizationLevel: 3,
-                        optimize: 3, //keep-empty: Preserve empty transparent frames
+                        optimize: 3,
                         lossy: 2,
                     }),
-                    //svg
                     imagemin.svgo({
                         plugins: [
                             {
@@ -228,16 +207,19 @@ gulp.task('imagemin', function () {
                             },
                         ],
                     }),
-                    //jpg lossless
-                    // imagemin.jpegtran({
-                    //     progressive: true
-                    // }),
-                    //jpg very light lossy, use vs jpegtran
                     imageminMozjpeg({
                         quality: 90,
                     }),
                 ])
             )
         )
-        .pipe(gulp.dest('optimize'))
-})
+        .pipe(dest('optimize'))
+    cb()
+}
+
+exports.deploy = deploy
+exports.build = build
+exports.svgMin = svgMin
+exports.svg = svg
+exports.imagemin = images
+exports.default = buildWatch
