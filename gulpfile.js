@@ -1,5 +1,5 @@
 const path = require('path')
-const { src, watch, dest } = require('gulp'),
+const { src, watch, dest, series } = require('gulp'),
     stylus = require('gulp-stylus'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
@@ -138,7 +138,7 @@ function deploy(cb) {
         )
         .pipe(postcss(processors))
         .pipe(concat('one.css'))
-        .pipe(dest('./css'))
+        .pipe(dest('./public/css'))
     cb()
 }
 
@@ -163,14 +163,38 @@ function build(cb) {
         )
         .pipe(postcss(processors))
         .pipe(concat('one.css'))
-        .pipe(dest('./css'))
+        .pipe(dest('./public/css'))
         .pipe(browserSync.stream())
+    cb()
+}
+
+const babel = require('gulp-babel')
+const plumber = require('gulp-plumber')
+
+function javascript(cb) {
+    src('js/**/*.js')
+        .pipe(plumber())
+        .pipe(
+            babel({
+                presets: [
+                    [
+                        '@babel/env',
+                        {
+                            modules: false,
+                        },
+                    ],
+                ],
+            })
+        )
+        .pipe(dest('./public/js'))
+        .pipe(browserSync.reload({ stream: true }))
     cb()
 }
 
 async function buildWatch(cb) {
     await loadBrowserSync()
     watch('**/*.styl', build)
+    watch('js/**/*.js', javascript)
     cb()
 }
 
@@ -217,9 +241,10 @@ function images(cb) {
     cb()
 }
 
+exports.javascript = javascript
 exports.deploy = deploy
 exports.build = build
 exports.svgMin = svgMin
 exports.svg = svg
 exports.imagemin = images
-exports.default = buildWatch
+exports.default = series(javascript, build, buildWatch)

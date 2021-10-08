@@ -1374,10 +1374,8 @@ function getAllVariables() {
                                 rule.selectorText === ':root'
                                     ? [
                                           ...def,
-                                          ...Array.from(
-                                              rule.style
-                                          ).filter((name) =>
-                                              name.startsWith('--')
+                                          ...Array.from(rule.style).filter(
+                                              (name) => name.startsWith('--')
                                           ),
                                       ]
                                     : def),

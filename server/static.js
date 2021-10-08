@@ -2,11 +2,11 @@ const { theme } = require('./config')
 module.exports = [
     {
         route: '/media/interface/0/' + theme + '/css',
-        dir: './css',
+        dir: './public/css',
     },
     {
         route: '/media/interface/0/' + theme + '/js',
-        dir: './js',
+        dir: './public/js',
     },
     {
         route: '/backstop',
