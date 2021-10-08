@@ -1,5 +1,5 @@
 const path = require('path')
-const { src, watch, dest } = require('gulp'),
+const { src, watch, dest, parallel } = require('gulp'),
     stylus = require('gulp-stylus'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
@@ -138,7 +138,7 @@ function deploy(cb) {
         )
         .pipe(postcss(processors))
         .pipe(concat('one.css'))
-        .pipe(dest('./css'))
+        .pipe(dest('./public/css'))
     cb()
 }
 
@@ -163,14 +163,19 @@ function build(cb) {
         )
         .pipe(postcss(processors))
         .pipe(concat('one.css'))
-        .pipe(dest('./css'))
+        .pipe(dest('./public/css'))
         .pipe(browserSync.stream())
+    cb()
+}
+
+function javascript(cb) {
+    src('js/**/*.js').pipe(dest('./public/js')).pipe(browserSync.reload)
     cb()
 }
 
 async function buildWatch(cb) {
     await loadBrowserSync()
-    watch('**/*.styl', build)
+    watch(['**/*.styl', 'js/**/*.js'], parallel(build, javascript))
     cb()
 }
 
@@ -217,6 +222,7 @@ function images(cb) {
     cb()
 }
 
+exports.javascript = javascript
 exports.deploy = deploy
 exports.build = build
 exports.svgMin = svgMin
