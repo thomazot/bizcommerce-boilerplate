@@ -91,10 +91,8 @@ function svg(cb) {
             transform: [
                 (svg) =>
                     svg
-                        .split('<symbol')
-                        .join(`\n\t<symbol`)
-                        .split('</svg>')
-                        .join('\n</svg>'),
+                        .replace(/<symbol/g, `\n\t<symbol`)
+                        .replace(/<\/svg>/g, '\n</svg>'),
             ],
         },
         mode: {
