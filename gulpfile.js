@@ -95,7 +95,7 @@ function svg(cb) {
                         .replace(/<\/svg>/g, '\n</svg>')
                         .replace(/fill="none" +/g, '')
                         .replace(
-                            /fill="#(a-Z0-9){3,}"/g,
+                            /fill="#([a-zA-Z0-9]){3,}"/g,
                             `fill="currentColor"`
                         ),
             ],
