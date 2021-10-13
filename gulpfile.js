@@ -1,5 +1,5 @@
 const path = require('path')
-const { src, watch, dest, series } = require('gulp'),
+const { src, watch, dest, series, parallel } = require('gulp'),
     stylus = require('gulp-stylus'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
@@ -57,8 +57,8 @@ function loadBrowserSync() {
     )
 }
 
-function svgMin(cb) {
-    src('svg/*.svg')
+async function svgMin(cb) {
+    await src('svg/*.svg')
         .pipe(
             svgmin({
                 multipass: true,
@@ -87,6 +87,15 @@ function svg(cb) {
                 class: 'svg-sprites',
                 id: 'skin-sprite',
             },
+            namespaceIDs: true,
+            transform: [
+                (svg) =>
+                    svg
+                        .split('<symbol')
+                        .join(`\n\t<symbol`)
+                        .split('</svg>')
+                        .join('\n</svg>'),
+            ],
         },
         mode: {
             symbol: {
@@ -98,6 +107,12 @@ function svg(cb) {
 
     src('svg/optimize/*.svg').pipe(svgSprite(config)).pipe(dest('./templates'))
 
+    cb()
+}
+
+function svgWatch(cb) {
+    watch('svg/*.svg', svgMin)
+    watch('svg/optimize/*.svg', svg)
     cb()
 }
 
@@ -191,7 +206,7 @@ const cache = require('gulp-cache'),
     imageminGiflossy = require('imagemin-giflossy')
 
 function images(cb) {
-    src('img/**/*.{gif,png,jpg}')
+    src('img/*.{gif,png,jpg}')
         .pipe(
             cache(
                 imagemin([
@@ -221,7 +236,12 @@ function images(cb) {
                 ])
             )
         )
-        .pipe(dest('optimize'))
+        .pipe(dest('img/optimize'))
+    cb()
+}
+
+function imagesWatch(cb) {
+    watch('images/*.{gif,img,png}', images)
     cb()
 }
 
@@ -231,4 +251,8 @@ exports.build = build
 exports.svgMin = svgMin
 exports.svg = svg
 exports.imagemin = images
-exports.default = series(javascript, build, buildWatch)
+exports.default = series(
+    javascript,
+    build,
+    parallel(buildWatch, imagesWatch, svgWatch)
+)
