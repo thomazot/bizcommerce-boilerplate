@@ -92,7 +92,12 @@ function svg(cb) {
                 (svg) =>
                     svg
                         .replace(/<symbol/g, `\n\t<symbol`)
-                        .replace(/<\/svg>/g, '\n</svg>'),
+                        .replace(/<\/svg>/g, '\n</svg>')
+                        .replace(/fill="none" +/g, '')
+                        .replace(
+                            /fill="#(a-Z0-9){3,}"/g,
+                            `fill="currentColor"`
+                        ),
             ],
         },
         mode: {
