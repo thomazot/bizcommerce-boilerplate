@@ -1,6 +1,6 @@
 {
     "protocol": "https",
-    "host": "amarelinhadecor.loja.biz",
+    "host": "strongertrucks.loja.biz",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,
