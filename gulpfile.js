@@ -2,45 +2,13 @@ const path = require('path')
 const { src, watch, dest, series, parallel } = require('gulp'),
     stylus = require('gulp-stylus'),
     postcss = require('gulp-postcss'),
-    autoprefixer = require('autoprefixer'),
-    pxtorem = require('postcss-pxtorem'),
     concat = require('gulp-concat')
 const browserSync = require('browser-sync')
 const svgSprite = require('gulp-svg-sprite')
 const svgmin = require('gulp-svgmin'),
     svgo = require('gulp-svgo')
 const config = require('./skin')
-const { rootValue, unitPrecision } = config.pxtorem
 var { protocol, host } = config
-
-const processors = [
-    autoprefixer({
-        grid: true,
-        cascade: false,
-    }),
-    pxtorem({
-        rootValue: rootValue,
-        unitPrecision: unitPrecision,
-        propList: [
-            'font',
-            'font-size',
-            'line-height',
-            'letter-spacing',
-            'width',
-            'height',
-            'margin',
-            'margin*',
-            'padding*',
-            'top',
-            'right',
-            'bottom',
-            'left',
-        ],
-        mediaQuery: false,
-        minPixelValue: 0,
-        replace: true,
-    }),
-]
 
 function loadBrowserSync() {
     browserSync.init(
@@ -138,7 +106,7 @@ function deploy(cb) {
                 },
             })
         )
-        .pipe(postcss(processors))
+        .pipe(postcss())
         .pipe(concat('one.css'))
         .pipe(dest('./public/css'))
     cb()
@@ -163,7 +131,7 @@ function build(cb) {
                 },
             })
         )
-        .pipe(postcss(processors))
+        .pipe(postcss())
         .pipe(concat('one.css'))
         .pipe(dest('./public/css'))
         .pipe(browserSync.stream())

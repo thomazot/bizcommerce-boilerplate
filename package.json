@@ -41,7 +41,7 @@
         "@babel/core": "^7.15.8",
         "@babel/preset-env": "^7.15.8",
         "@webcomponents/webcomponentsjs": "^2.0.0",
-        "autoprefixer": "10.3.7",
+        "autoprefixer": "^10.4.0",
         "browser-sync": "^2.26.3",
         "git-commit-msg-linter": "^3.1.0",
         "gulp-babel": "^8.0.0",
@@ -55,8 +55,14 @@
         "imagemin-mozjpeg": "^9.0.0",
         "imagemin-pngquant": "^9.0.0",
         "imagemin-zopfli": "^7.0.0",
-        "postcss": "8.3.9",
+        "postcss": "^8.3.11",
         "postcss-pxtorem": "6.0.0",
-        "rollup": "2.58.0"
-    }
+        "rollup": "2.58.0",
+        "tailwindcss": "^2.2.19"
+    },
+    "browserslist": [
+        "defaults",
+        "not IE 11",
+        "maintained node versions"
+    ]
 }

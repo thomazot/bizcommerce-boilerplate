@@ -1,15 +1,3 @@
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 /**
  * Tema:     Neon
  * Versão:   1.0
@@ -712,7 +700,7 @@ function default_categories_carrossel() {
       navigation: true,
       navigationText: ['?', '?'],
       pagination: false,
-      afterInit: function afterInit() {
+      afterInit: function () {
         menu.addClass('loaded');
       }
     });
@@ -736,7 +724,7 @@ function default_carrossel_produtos() {
           autoPlay: 3000,
           stopOnHover: true,
           navigation: false,
-          beforeMove: function beforeMove() {
+          beforeMove: function () {
             if (typeof $j.fn.lazyload != 'undefined') {
               $j(el).find('img').lazyload();
             }
@@ -749,7 +737,7 @@ function default_carrossel_produtos() {
           navigationText: ['?', '?'],
           items: 5,
           itemsCustom: [[0, 1], [568, 2], [768, 3], [1024, 4], [1270, 5]],
-          beforeMove: function beforeMove() {
+          beforeMove: function () {
             if (typeof $j.fn.lazyload != 'undefined') {
               $j(el).find('img').lazyload();
             }
@@ -847,7 +835,7 @@ function default_carrossel_jointsales() {
         navigation: true,
         navigationText: ['?', '?'],
         autoHeight: true,
-        beforeMove: function beforeMove() {
+        beforeMove: function () {
           if (typeof $j.fn.lazyload != 'undefined') {
             $j(el).find('img').lazyload();
           }
@@ -1300,28 +1288,20 @@ function scrollTop() {
 }
 
 function categoriesTitle() {
-  var items = Array.from(document.querySelectorAll('.header-container .categories .li--0'));
-  items.forEach(function (item) {
-    var title = item.querySelector('.a--0') && item.querySelector('.a--0').textContent.trim();
-    var child = item.querySelector('.box--1');
+  const items = Array.from(document.querySelectorAll('.header-container .categories .li--0'));
+  items.forEach(item => {
+    const title = item.querySelector('.a--0') && item.querySelector('.a--0').textContent.trim();
+    const child = item.querySelector('.box--1');
     child.setAttribute('data-title', title);
   });
 }
 
 function getAllVariables() {
-  return Array.from(document.styleSheets).filter(function (sheet) {
-    return sheet.href === null || sheet.href.startsWith(window.location.origin);
-  }).reduce(function (acc, sheet) {
-    return acc = [].concat(_toConsumableArray(acc), _toConsumableArray(Array.from(sheet.cssRules).reduce(function (def, rule) {
-      return def = rule.selectorText === ':root' ? [].concat(_toConsumableArray(def), _toConsumableArray(Array.from(rule.style).filter(function (name) {
-        return name.startsWith('--');
-      }))) : def;
-    }, [])));
-  }, []);
+  return Array.from(document.styleSheets).filter(sheet => sheet.href === null || sheet.href.startsWith(window.location.origin)).reduce((acc, sheet) => acc = [...acc, ...Array.from(sheet.cssRules).reduce((def, rule) => def = rule.selectorText === ':root' ? [...def, ...Array.from(rule.style).filter(name => name.startsWith('--'))] : def, [])], []);
 }
 
 function hexToRgb(h) {
-  var r = 0,
+  let r = 0,
       g = 0,
       b = 0;
   h = h.replace('#', ''); // 3 digits
@@ -1340,9 +1320,9 @@ function hexToRgb(h) {
 }
 
 function createRootVariableRGB() {
-  var variablesName = getAllVariables() || [];
-  variablesName.forEach(function (name) {
-    var value = getComputedStyle(document.documentElement).getPropertyValue(name);
+  const variablesName = getAllVariables() || [];
+  variablesName.forEach(name => {
+    const value = getComputedStyle(document.documentElement).getPropertyValue(name);
     document.documentElement.style.setProperty("".concat(name, "-rgb"), hexToRgb(value));
   });
 }

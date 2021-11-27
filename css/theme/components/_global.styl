@@ -2,6 +2,12 @@
  * Global
  * Elementos globais que podem ser extendidos ao longo do documento
  */
+@css {
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+}
+
 .container
     container()
 
@@ -22,7 +28,6 @@
     --button-hover: button_bg_hover
     --button-contrast: button_font
     --button-contrast-hover: button_font_hover
-
     // Socials
     --youtube: #cc0404
     --facebook: #3b5998
