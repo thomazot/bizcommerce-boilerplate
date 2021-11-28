@@ -39,6 +39,10 @@
 body
     font-family: font
 
+    > *
+        flex: 0 0 auto
+        min-height: 0
+
 .wrapper-container
     overflow: visible
 
@@ -75,8 +79,40 @@ body
         color: #f7be07
 
 // Container
-.header, .main-container, .footer
+.wrapper
+    display: flex
+    flex-flow: column nowrap
+
+    &, &-container
+        min-height: calc(100vh - 48px)
+
+.header, .main-container, .main, .footer, .col-main
     container()
+
+.header-container, .footer-container
+    flex: 0 0 auto
+    min-height: 0
+
+.main-container
+    flex: 1
+    min-height: 0
+
+.main
+    margin: 0
+    gap: gap
+
+.col-left
+    flex: 0 1 225px
+    margin: 0
+    padding: 0
+    min-width: 0
+    max-width: none
+
+.col-main
+    flex: 1
+    padding: 0
+    min-width: 0
+    width: max-content
 
 .categories .ul--0
     max-width: viewport
@@ -84,3 +120,6 @@ body
 .wrapper
     svg
         fill: currentColor
+
+.ias-noneleft
+    display: none !important

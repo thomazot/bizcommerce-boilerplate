@@ -26,7 +26,8 @@
         "presvg": "yarn svg-min",
         "svg": "npx gulp svg",
         "svg-min": "npx gulp svgMin",
-        "imagemin": "npx gulp imagemin"
+        "imagemin": "npx gulp imagemin",
+        "build": "npx gulp build"
     },
     "keywords": [
         "bizcommerce",
