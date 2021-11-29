@@ -1,4 +1,19 @@
 .products
+    @media (max-width: (viewport + 110px))
+        position: relative
+        overflow: hidden
+        max-width: 100%
+
+        &__list
+            position: static
+
+    @media (min-width: (viewport + 111px))
+        .owl-next
+            right: -50px
+
+        .owl-prev
+            left: - 50px
+
     &__list
         margin: '0 -%s' % (gap / 2)
 

@@ -667,7 +667,7 @@ function default_categories_justify() {
           menu_id = $j(menu).attr('id'),
           width = 0;
       $j('> .ul--0 > .li--0', menu).removeClass('removed').each(function (i, el) {
-        width += $j(el).width();
+        width += $j(el).width() + 20;
 
         if (width > limit) {
           $j('#' + menu_id + ' > .ul--0 > .li--0').slice(i).addClass('removed');
@@ -1304,7 +1304,7 @@ function categoriesTitle() {
   items.forEach(function (item) {
     var title = item.querySelector('.a--0') && item.querySelector('.a--0').textContent.trim();
     var child = item.querySelector('.box--1');
-    child.setAttribute('data-title', title);
+    if (child) child.setAttribute('data-title', title);
   });
 }
 
@@ -1359,6 +1359,12 @@ $j(document).ready(function ($) {
   $('.categories .parent').click(function (event) {
     if ($(event.target).hasClass('parent')) {
       $(event.target).toggleClass('on');
+    }
+  });
+  addSVG({
+    'z-down': {
+      selector: '.header .categories .li--0.parent .a--0',
+      mode: 'append'
     }
   });
 }).on('resizeStop', function (e) {// Safe window.resize

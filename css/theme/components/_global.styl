@@ -22,7 +22,6 @@
     --button-hover: button_bg_hover
     --button-contrast: button_font
     --button-contrast-hover: button_font_hover
-
     // Socials
     --youtube: #cc0404
     --facebook: #3b5998
@@ -31,6 +30,37 @@
     --thumblr: #32506d
     --linkedin: #007bb5
     --instagram: #e4405f
+
+// Fonts
+@font-face
+    font-weight: bold
+    font-style: normal
+    font-family: 'Be-Vietnam'
+    src: url(be-vietnam-bold-woff2) format('woff2'), url(be-vietnam-bold-woff) format('woff')
+
+@font-face
+    font-weight: light
+    font-style: normal
+    font-family: 'Be-Vietnam'
+    src: url(be-vietnam-light-woff2) format('woff2'), url(be-vietnam-light-woff) format('woff')
+
+@font-face
+    font-weight: medium
+    font-style: normal
+    font-family: 'Be-Vietnam'
+    src: url(be-vietnam-medium-woff2) format('woff2'), url(be-vietnam-medium-woff) format('woff')
+
+@font-face
+    font-weight: regular
+    font-style: normal
+    font-family: 'Be-Vietnam'
+    src: url(be-vietnam-regular-woff2) format('woff2'), url(be-vietnam-regular-woff) format('woff')
+
+@font-face
+    font-weight: semibold
+    font-style: normal
+    font-family: 'Be-Vietnam'
+    src: url(be-vietnam-semibold-woff2) format('woff2'), url(be-vietnam-semibold-woff) format('woff')
 
 /*
  * Base
@@ -96,6 +126,15 @@ body
 .main-container
     flex: 1
     min-height: 0
+
+    @media (max-width: (viewport + 110px))
+        overflow: hidden
+        max-width: 100%
+
+.footer-container
+    @media (max-width: (viewport + 110px))
+        overflow: hidden
+        max-width: 100%
 
 .main
     margin: 0
