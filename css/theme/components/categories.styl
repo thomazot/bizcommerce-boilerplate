@@ -1,5 +1,12 @@
-@media media-max-lg
-    .categories
+cateogriesHover(color)
+    text-shadow: .01px 0 0 color, -.01px 0 0 color, 0 .01px 0 color, 0 -.01px 0 color
+
+.categories
+    &__show
+        order: -1
+        margin: 0
+
+    @media media-max-lg
         .parent
             position: relative
 
@@ -27,7 +34,8 @@
                 align-items: center
                 width: 48px
                 height: 48px
-                background: var(--primary-contrast)
+                background: none
+                color: var(--primary-contrast)
                 font-size: 20px
                 transition: all .2s ease
 
@@ -41,22 +49,86 @@
         .all-li--0
             padding-bottom: 0
 
-@media media-min-lg
-    .categories
+    @media media-min-lg
         flex: 1
         margin-bottom: 0 !important
         min-width: 0
         background: none
 
         .a--0
-            color: var(--primary)
-            text-transform: uppercase
+            padding: 0
+            color: currentColor
             white-space: nowrap
-            font-weight: semibold
+            font-weight: regular
             font-size: 14px
 
+            .z-down
+                margin-left: 5px
+                width: 8px
+                height: 5px
+
+        .a--1
+            color: currentColor
+            font-weight: regular
+            font-size: 14px
+
+            &:hover
+                color: currentColor
+
+                cateogriesHover(var(--primary))
+
         .li--0
+            flex: 0 0 auto
             order: 1
 
+            &.sobre-nos
+                order: 2
+
+            &:hover
+                .a--0 span
+                    cateogriesHover(var(--primary-contrast))
+
+        .li--1
+            min-width: 200px
+            color: var(--primary)
+
+        .ul--0
+            justify-content: space-between
+            min-width: 0
+            gap: gap
+
+        .box--1
+            z-index: -1
+            visibility: hidden
+            box-sizing: content-box
+            padding: 0
+            min-width: max-content
+            border-radius: radius
+            opacity: 0
+            transition: opacity .1s linear, transform .2s ease-in-out
+            transition-delay: .1s
+            transform: translateY(10px)
+
+            ^[0]:hover ^[1..-1]
+                visibility: visible
+
+            .li--0:hover ^[1..-1]
+                z-index: 20
+                opacity: 1
+                transition: opacity .1s linear, transform .2s ease-in-out
+                transform: translateY(0)
+
+        .ul--1
+            flex: 1
+            padding: 16px
+            min-width: 0
+
+        &__block
+            flex: 0 0 260px
+            margin: 0
+            padding: 16px
+            min-width: 0
+            border: 0
+
         &__all
-            order: 2
+            display: none

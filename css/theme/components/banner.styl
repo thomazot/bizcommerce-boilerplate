@@ -1,2 +1,66 @@
-.cms-home .header-container + .banner
-    margin: 0
+#banner__home_banner_full
+    .banner
+        &__wrapper
+            display: flex
+            overflow: hidden
+            width: 100%
+
+        &__item
+            flex: 0 0 100%
+
+#banner__regua-de-vantagens
+    container()
+
+    .ico
+        margin-right: 5px
+        width: 30px
+        height: 30px
+
+    .rulers
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        font-weight: regular
+        font-size: 14px
+
+        &__text
+            padding-top: 3px
+
+#banner__home_banner_mosaico
+    container()
+
+    margin: (gap / 2) 0
+
+    a
+        display: block
+        width: 100%
+        height: 100%
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    .banner__wrapper
+        display: grid
+        grid-gap: gap
+        grid-template-areas: 'banner1' 'banner2' 'banner3' 'banner4'
+
+        @media media-min-md
+            grid-template-areas: 'banner1 banner1' 'banner2 banner3' 'banner4 banner4'
+
+        @media media-min-lg
+            grid-template-areas: 'banner1 banner2 banner4' 'banner1 banner3 banner4'
+
+    .slide
+        &--1
+            grid-area: banner1
+
+        &--2
+            grid-area: banner2
+
+        &--3
+            grid-area: banner3
+
+        &--4
+            grid-area: banner4

@@ -4,6 +4,23 @@
  * Update:   05/2016
  */
 
+const navigationText = [
+    '<svg class="ico z-prev"><use xlink:href="#z-prev"></use></svg>',
+    '<svg class="ico z-next"><use xlink:href="#z-next"></use></svg>',
+]
+const productsItemsCustom = [
+    [0, 1],
+    [568, 2],
+    [768, 3],
+    [1024, 4],
+]
+
+const productsItemsBlockNews = [
+    [0, 1],
+    [568, 2],
+    [768, 3],
+]
+
 ;(function ($) {
     $.fn.neonTheme = function (options) {
         var neon = $.extend({}, $.fn.neonTheme.custom, options)
@@ -734,7 +751,7 @@ function default_categories_justify() {
             $j('> .ul--0 > .li--0', menu)
                 .removeClass('removed')
                 .each(function (i, el) {
-                    width += $j(el).width()
+                    width += $j(el).width() + 20
 
                     if (width > limit) {
                         $j('#' + menu_id + ' > .ul--0 > .li--0')
@@ -781,7 +798,7 @@ function default_categories_carrossel() {
     if (menu.find('.li--0').length > 0) {
         menu.find('.ul--0').owlCarousel({
             navigation: true,
-            navigationText: ['?', '?'],
+            navigationText,
             pagination: false,
             afterInit: function () {
                 menu.addClass('loaded')
@@ -814,18 +831,17 @@ function default_carrossel_produtos() {
                 })
             } else {
                 // se for em uma listagem normal
+                const isBlockNews = Boolean(
+                    $j(el).closest('.block-news').length
+                )
 
                 $j(el).owlCarousel({
                     navigation: true,
-                    navigationText: ['?', '?'],
+                    navigationText,
                     items: 5,
-                    itemsCustom: [
-                        [0, 1],
-                        [568, 2],
-                        [768, 3],
-                        [1024, 4],
-                        [1270, 5],
-                    ],
+                    itemsCustom: isBlockNews
+                        ? productsItemsBlockNews
+                        : productsItemsCustom,
                     beforeMove: function () {
                         if (typeof $j.fn.lazyload != 'undefined') {
                             $j(el).find('img').lazyload()
@@ -910,7 +926,7 @@ function default_carrossel_brands() {
             $j(el).owlCarousel({
                 itemsScaleUp: true,
                 navigation: true,
-                navigationText: ['?', '?'],
+                navigationText,
                 pagination: false,
             })
         })
@@ -929,7 +945,7 @@ function default_carrossel_jointsales() {
                 singleItem: true,
                 itemScaleUp: true,
                 navigation: true,
-                navigationText: ['?', '?'],
+                navigationText,
                 autoHeight: true,
                 beforeMove: function () {
                     if (typeof $j.fn.lazyload != 'undefined') {
@@ -1353,7 +1369,7 @@ function categoriesTitle() {
             item.querySelector('.a--0').textContent.trim()
         const child = item.querySelector('.box--1')
 
-        child.setAttribute('data-title', title)
+        if (child) child.setAttribute('data-title', title)
     })
 }
 
@@ -1439,6 +1455,43 @@ $j(document)
             if ($(event.target).hasClass('parent')) {
                 $(event.target).toggleClass('on')
             }
+        })
+
+        addSVG({
+            'z-down': {
+                selector: '.header .categories .li--0.parent .a--0',
+                mode: 'append',
+            },
+        })
+
+        if ($('#banner__home_banner_full .banner__wrapper').length) {
+            $('#banner__home_banner_full .banner__wrapper').owlCarousel({
+                addClassActive: true,
+                items: 1,
+                singleItem: true,
+                itemScaleUp: true,
+                autoPlay: 7000,
+                navigationText,
+                stopOnHover: true,
+                navigation: true,
+                pagination: false,
+                responsiveRefreshRate: 60,
+                slideSpeed: 400,
+            })
+        }
+
+        $('.block-blog__list').each(function () {
+            $(this).owlCarousel({
+                navigation: true,
+                navigationText,
+                items: 3,
+                itemsCustom: productsItemsBlockNews,
+                beforeMove: function () {
+                    if (typeof $.fn.lazyload != 'undefined') {
+                        $(element).find('img').lazyload()
+                    }
+                },
+            })
         })
     })
     .on('resizeStop', function (e) {

@@ -35,18 +35,11 @@ a
 a:hover
     color: var(--primary-hover)
 
-/* Transition */
-a, button, input, select, textarea, .order-status:after, .order-status .ico, .osc-steps .opc-block-progress dt:after, .tab-cor .name, .tab-cor label, .borda-cores label, .borda-cores .name, .borda-tipo label, .borda-tipo img, .tab-produto label, .tab-produto img
-    transition: all 100ms ease-out
-
 /* icon */
 .toolbar-bottom a.next:before, .toolbar-bottom a.previous:before, .cart-table .btn-remove:before, .review-summary label:before, #checkout-step-login .hints li:before, .osc-accordion .opc-block-progress dt.complete:after, #checkout-shipping-method-load ul li label:after, .osc-accordion .step-title .number:before, #checkout-payment-method-load dt:after, .downloadable-sample-link:before, .downloadable-free-sample .link:before, .mycart-products .btn-remove:before, .success-content .confirmation:before, .success-content .print:before, .benefits li:before, .order-status.state-complete span:after, .my-account .pager ol li a.next:before, .my-account .pager ol li a.previous:before, .order-date:before, .boleto-info a:before, .order-items a.link-print:before, .osc-onepage .step-title .number:before, .osc-steps .step-title .number:before, .osc-steps .opc-block-progress dt:before, .the-share a:before, .success-content .pagto a.boleto:before, .qty-wrapper .bt:before, .or-map:before, .revendaslist .telmail li:before, .arevenda .dados .contato li:before, .no-coms:before, .case-detail-content .bx-controls-direction a:before
     content: ''
 
 /* Estrutura */
-.wrapper > *:not(:last-child), .header-container > *:not(:last-child), .main-container > *:not(:last-child), .col-main > *:not(:last-child), .sidebar > *:not(:last-child), .footer-container > *:not(:last-child), .footer > *:not(:last-child)
-    margin-bottom: 1rem
-
 .col-main
     flex: 1
     min-width: 0
@@ -650,45 +643,6 @@ form.searchautocomplete
 .newsletter
     position: relative
 
-.newsletter__form
-    display: flex
-    flex-flow: row wrap
-    align-items: center
-    transition: all 300ms ease-out
-
-.newsletter__text
-    flex: 1 1 100%
-    margin-bottom: 1rem
-    padding: 0 .25rem
-
-.newsletter__name
-    display: flex
-    flex: 1 1 20%
-    align-items: center
-    padding: 0 .25rem .5rem
-    min-width: 250px
-
-.newsletter__gender
-    display: flex
-    flex: 1 1 auto
-    align-items: center
-    padding: 0 .25rem .5rem
-    min-width: 250px
-
-.newsletter__email
-    display: flex
-    flex: 1 1 40%
-    align-items: center
-    padding: 0 .25rem .5rem
-    min-width: 250px
-
-.newsletter__submit
-    flex: 1 1 auto
-    padding: 0 .25rem .5rem
-
-.newsletter__btn
-    width: 100%
-
 .newsletter__loader
     position: absolute
     top: calc(50% - 1.375rem)
@@ -853,7 +807,6 @@ form.searchautocomplete
 
 .products--list .products__case
     display: flex
-    flex-flow: row nowrap
     align-items: center
 
 .products--list .product__header
@@ -1445,47 +1398,45 @@ form.searchautocomplete
 .mycart
     position: relative
     z-index: 20
-    height: 2.75rem
 
 .mycart__header a
     position: relative
     display: flex
     justify-content: center
     align-items: center
-    width: 2.75rem
-    height: 2.75rem
-    border-radius: 100%
-    box-shadow: inset 0 0 0 1px var(--primary)
+    width: 25px
+    height: 25px
+    color: currentColor
 
 .mycart__header .ico
     max-height: none
-    width: 1rem
-    height: 1rem
-    fill: var(--primary)
+    width: 20px
+    height: 20px
+    fill: currentColor
 
 .mycart__header .text
     display: none
 
 .mycart__header .qtd
     position: absolute
-    top: 0
-    right: -.25rem
-    width: 1rem
-    height: 1rem
+    top: -10px
+    right: -10px
+    width: 18px
+    height: 18px
     border-radius: 100%
-    background: var(--primary-hover)
-    color: var(--primary-contrast-hover)
+    background: var(--button)
+    color: var(--button-contrast)
     text-align: center
-    text-indent: -1.5px
-    letter-spacing: -.1em
-    font-size: .7rem
-    line-height: 1rem
+    font-weight: semibold
+    font-size: 12px
+    line-height: 16px
 
 .mycart__content
     position: absolute
     top: 100%
     left: 0
     display: none
+    display: none !important
     overflow: auto
     padding: 1rem
     max-width: 90vw
@@ -1612,7 +1563,6 @@ form.searchautocomplete
 .myaccount
     position: relative
     z-index: 20
-    height: 2.75rem
 
 .myaccount__header a
     position: relative
@@ -1620,10 +1570,9 @@ form.searchautocomplete
     justify-content: center
     align-items: center
     overflow: hidden
-    width: 2.75rem
-    height: 2.75rem
-    border-radius: 100%
-    box-shadow: inset 0 0 0 1px var(--primary)
+    width: 25px
+    height: 25px
+    color: currentColor
 
 .myaccount__header .thumb
     position: absolute
@@ -1642,9 +1591,9 @@ form.searchautocomplete
 .myaccount__header .ico
     margin: 0
     max-height: none
-    width: 2.75rem
-    height: 2.75rem
-    fill: var(--primary)
+    width: 20px
+    height: 20px
+    fill: currentColor
 
 .myaccount__header .name, .myaccount__header .text
     display: none
@@ -1654,6 +1603,7 @@ form.searchautocomplete
     top: 100%
     left: 0
     display: none
+    display: none !important
     padding: 1rem
     max-width: 90vw
     width: 320px
@@ -1866,9 +1816,6 @@ form.searchautocomplete
 .categories .li--0
     position: relative
 
-.categories .li--0:hover .box--1
-    transform: translateX(0)
-
 .categories .li--0:hover .a--0
     background: var(--primary-hover)
     color: var(--primary-contrast-hover)
@@ -1887,7 +1834,6 @@ form.searchautocomplete
 .categories .box--1
     display: flex
     align-items: stretch
-    transform: translateX(-99999px)
 
 .categories .ul--1
     flex: 1 1 auto
@@ -1996,10 +1942,8 @@ body:not(.mobile) .categories .ul--1
 .categories--justify .li--0
     flex: 1 1 auto
 
-.categories--justify .li--0.removed
-    position: fixed !important
-    top: -9999px !important
-    left: -9999px !important
+.categories--justify .li--0.removed:not(.categories__all)
+    display: none
 
 .categories--justify .box--1
     position: absolute
@@ -2019,19 +1963,12 @@ body:not(.mobile) .categories .ul--1
 .categories--justify .drop--bottom .box--1
     bottom: 100%
 
-.categories--justify .ul--1
-    max-width: 90vw
-    width: 16rem
-
 .categories--justify .li--1
     display: block
 
 .categories--justify .a--1
     display: block
     padding: .5rem
-
-.categories--justify .a--1:hover
-    box-shadow: -.5rem 0 0 var(--primary)
 
 .categories--justify .ul--2
     padding-bottom: .5rem
@@ -2419,34 +2356,27 @@ body:not(.mobile) .categories .ul--1
 .owl-prev, .owl-next
     position: absolute
     top: calc(50% - 1.375rem)
+    display: flex
+    justify-content: center
+    align-items: center
     overflow: hidden
-    width: 2.75rem
-    height: 2.75rem
-    border-radius: 3px
-    background: var(--primary)
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1)
-    color: var(--primary-contrast)
-    text-indent: -9999px
-    font-size: 0
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: var(--primary-contrast)
+    box-shadow: shadow
+    color: var(--primary)
 
-.owl-prev:before, .owl-next:before
-    position: absolute
-    top: 0
-    left: 0
-    display: block
-    width: 100%
-    height: 100%
-    text-align: center
-    line-height: 2.75rem
+    &:hover
+        background: var(--primary)
+        color: var(--primary-contrast)
 
-    icon('\f053')
+    .ico
+        width: 6px
+        height: 11px
 
-    text-indent: 0
-    font-size: 1rem
-
-.owl-prev:hover, .owl-next:hover
-    background: var(--primary-hover)
-    color: var(--primary-contrast-hover)
+.owl-next
+    left: 100%
 
 body.ie .owl-prev, body.ie .owl-next
     text-indent: 0
@@ -2459,13 +2389,8 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 .owl-prev
     right: 100%
 
-.owl-next
-    left: 100%
-
-.owl-next:before, .owl-page span
+.owl-page span
     background: var(--primary)
-
-    icon('\f054')
 
 /* Feed RSS */
 .feeds__list
@@ -2773,10 +2698,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 .banner--nojs img.m_img
     display: none
 
-.banner--nojs .banner__wrapper
-    column-gap: 0
-    column-count: 3
-
 .banner--nojs .banner__item
     display: block
     overflow: hidden
@@ -2832,74 +2753,12 @@ body.ie .owl-prev:before, body.ie .owl-next:before
     display: flex
     justify-content: flex-end
     align-items: center
-    padding-top: 1rem
 
 .header .search
     flex: 1 1 auto
-    margin-left: 1rem
-
-.header .mywish, .header .mycart, .header .myaccount, .header .loginout
-    margin-left: 1rem
 
 .header .loginout
     text-align: right
-
-/* Footer */
-.footer-container
-    margin: 4rem 0 0
-    padding: 1rem 0
-    background: linear-gradient(var(--primary), var(--primary-hover))
-
-.footer
-    color: var(--primary-contrast)
-    font-size: .8rem
-
-.footer .newsletter
-    margin: '0 -%s' % (gap / 2)
-    padding: 1rem 0
-    border-bottom: 1px solid rgba(0, 0, 0, 0)
-    background: rgba(0, 0, 0, .2)
-    box-shadow: -980px 0 0 rgba(0, 0, 0, .2), 980px 0 0 rgba(0, 0, 0, .2)
-    font-size: 1rem
-
-.footer .newsletter .title
-    color: var(--primary-contrast)
-    text-align: center
-
-.footer .flex .title
-    color: var(--primary-contrast)
-    font-size: 1rem
-    opacity: .5
-
-.footer .std
-    color: var(--primary-contrast)
-
-.footer .tele
-    font-size: 2rem
-
-.footer .email
-    padding-top: .5rem
-    font-weight: 600
-
-.footer a
-    color: var(--primary-contrast)
-
-.footer a:hover
-    color: var(--primary-contrast-hover)
-
-.footer .myaccount__header a
-    margin-left: auto
-    background: #fff !important
-    box-shadow: 0 0 0 4px #fff
-
-.footer .myaccount__header a:hover
-    box-shadow: 0 0 0 4px #fff, 0 1rem 1rem -.5rem rgba(0, 0, 0, .3)
-
-.footer .myaccount__content
-    display: none !important
-
-.footer .socials
-    padding-top: 1rem
 
 /* Catálogo */
 .category-description
@@ -9164,12 +9023,6 @@ table .change-product-link:hover
     .options input.datetime-picker
         flex: 0 0 5rem
 
-/* ------ Newsletter */
-/* ~568px */
-@media (max-width: 35.5rem)
-    .newsletter__form
-        display: block
-
 /* ------ .page-title */
 /* ~768px */
 @media (max-width: 48rem)
@@ -9205,10 +9058,6 @@ table .change-product-link:hover
 @media (max-width: 35.5rem)
     .products__item
         flex: 1 1 100%
-
-    .products__case
-        display: flex
-        flex-flow: row nowrap
 
     .product__header
         flex: 0 0 40%
@@ -9451,9 +9300,6 @@ table .change-product-link:hover
     .mycart.on .mycart__content
         transform: translateX(0)
 
-    .mycart__header .ico
-        fill: var(--primary) !important
-
     .mycart__hide
         display: block
         margin: -1rem -1rem 1rem
@@ -9691,12 +9537,6 @@ table .change-product-link:hover
         column-count: 1
 
 /* ------ Header */
-/* ~1408px */
-@media (max-width: 88rem)
-    .header
-        padding-right: 1rem
-        padding-left: 1rem
-
 /* ~992px */
 @media (max-width: 62rem)
     .header-container
@@ -9711,10 +9551,6 @@ table .change-product-link:hover
     .header-container .loginout
         display: none
 
-    .header-container .mywish__header a, .header-container .mycart__header a, .header-container .myaccount__header a
-        background: var(--primary-contrast) !important
-        box-shadow: none
-
 /* ~768px */
 @media (max-width: 48rem)
     .mywish
@@ -9722,10 +9558,6 @@ table .change-product-link:hover
 
 /* ~568px */
 @media (max-width: 35.5rem)
-    .header
-        margin: 0 !important
-        padding: .125rem 0 .125rem 1rem
-
     .header .search
         z-index: 20
         flex: 0 0 auto
@@ -9781,31 +9613,6 @@ table .change-product-link:hover
     .header .myaccount, .header .mycart
         z-index: 10
         margin-left: 0
-
-    .header .myaccount__header, .header .mycart__header
-        padding: .375rem
-
-    .header .myaccount__header a, .header .mycart__header a
-        width: 2rem
-        height: 2rem
-
-/* ------ Footer */
-/* ~1408px */
-@media (max-width: 88rem)
-    .footer .newsletter
-        padding-right: 1rem
-        padding-left: 1rem
-
-/* ~768px */
-@media (max-width: 48rem)
-    .footer__payments, .footer__shipments, .footer__certificates
-        flex: 1 1 100%
-
-    .pays__list, .ships__list, .certs__list
-        justify-content: center
-
-    .footer .pays__title, .footer .ships__title, .footer .certs__title
-        display: none
 
 /* ------ Catálogo */
 /* ~768px */
@@ -10524,9 +10331,6 @@ table .change-product-link:hover
         min-width: 60px
         text-align: center
         line-height: 1em
-
-    .customer-account .footer .newsletter, .customer-account .footer__about, .customer-account .footer__doubts, .customer-account .footer__account, .customer-account .footer__payments, .customer-account .footer__shipments, .customer-account .footer__certificates
-        display: none
 
     .block-account .block-title
         position: fixed

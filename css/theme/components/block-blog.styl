@@ -1,0 +1,45 @@
+.block-blog
+    container()
+
+    img
+        width: 100%
+        object-fit: contain
+
+    &__list
+        margin: -(gap / 2)
+
+    &__title
+        margin-bottom: gap
+        font-weight: bold
+        font-size: 20px
+        line-height: 24px
+
+    &__item
+        padding: (gap / 2)
+
+        h3
+            display: block
+            margin: 12px 0
+            font-weight: bold
+            font-size: 14px
+
+        p
+            margin-bottom: 16px
+            font-weight: regular
+            font-size: 12px
+            line-height: 24px
+
+        a
+            display: inline-block
+            padding: 13px 25px
+            border: solid 2px var(--primary)
+            border-radius: radius
+            letter-spacing: .5px
+            font-weight: semibold
+            font-size: 14px
+            line-height: 1
+            transition: all .3s ease-in-out
+
+            &:hover
+                background: var(--primary)
+                color: var(--primary-contrast)

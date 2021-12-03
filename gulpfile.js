@@ -195,7 +195,7 @@ function javascript(cb) {
 
 async function buildWatch(cb) {
     await loadBrowserSync()
-    watch('**/*.styl', build)
+    watch(['**/*.styl', 'tokens.json'], build)
     watch('js/**/*.js', javascript)
     cb()
 }
@@ -209,7 +209,7 @@ const cache = require('gulp-cache'),
     imageminGiflossy = require('imagemin-giflossy')
 
 function images(cb) {
-    src('img/*.{gif,png,jpg}')
+    src('img/*.{gif,img,png,jpg,jpeg}')
         .pipe(
             cache(
                 imagemin([
@@ -244,7 +244,7 @@ function images(cb) {
 }
 
 function imagesWatch(cb) {
-    watch('images/*.{gif,img,png}', images)
+    watch('img/*.{gif,img,png,jpg,jpeg}', images)
     cb()
 }
 

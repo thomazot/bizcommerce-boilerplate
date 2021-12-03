@@ -15,7 +15,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  * Versão:   1.0
  * Update:   05/2016
  */
-;
+var navigationText = ['<svg class="ico z-prev"><use xlink:href="#z-prev"></use></svg>', '<svg class="ico z-next"><use xlink:href="#z-next"></use></svg>'];
+var productsItemsCustom = [[0, 1], [568, 2], [768, 3], [1024, 4]];
+var productsItemsBlockNews = [[0, 1], [568, 2], [768, 3]];
 
 (function ($) {
   $.fn.neonTheme = function (options) {
@@ -667,7 +669,7 @@ function default_categories_justify() {
           menu_id = $j(menu).attr('id'),
           width = 0;
       $j('> .ul--0 > .li--0', menu).removeClass('removed').each(function (i, el) {
-        width += $j(el).width();
+        width += $j(el).width() + 20;
 
         if (width > limit) {
           $j('#' + menu_id + ' > .ul--0 > .li--0').slice(i).addClass('removed');
@@ -710,7 +712,7 @@ function default_categories_carrossel() {
   if (menu.find('.li--0').length > 0) {
     menu.find('.ul--0').owlCarousel({
       navigation: true,
-      navigationText: ['?', '?'],
+      navigationText: navigationText,
       pagination: false,
       afterInit: function afterInit() {
         menu.addClass('loaded');
@@ -744,11 +746,12 @@ function default_carrossel_produtos() {
         });
       } else {
         // se for em uma listagem normal
+        var isBlockNews = Boolean($j(el).closest('.block-news').length);
         $j(el).owlCarousel({
           navigation: true,
-          navigationText: ['?', '?'],
+          navigationText: navigationText,
           items: 5,
-          itemsCustom: [[0, 1], [568, 2], [768, 3], [1024, 4], [1270, 5]],
+          itemsCustom: isBlockNews ? productsItemsBlockNews : productsItemsCustom,
           beforeMove: function beforeMove() {
             if (typeof $j.fn.lazyload != 'undefined') {
               $j(el).find('img').lazyload();
@@ -825,7 +828,7 @@ function default_carrossel_brands() {
       $j(el).owlCarousel({
         itemsScaleUp: true,
         navigation: true,
-        navigationText: ['?', '?'],
+        navigationText: navigationText,
         pagination: false
       });
     });
@@ -845,7 +848,7 @@ function default_carrossel_jointsales() {
         singleItem: true,
         itemScaleUp: true,
         navigation: true,
-        navigationText: ['?', '?'],
+        navigationText: navigationText,
         autoHeight: true,
         beforeMove: function beforeMove() {
           if (typeof $j.fn.lazyload != 'undefined') {
@@ -1304,7 +1307,7 @@ function categoriesTitle() {
   items.forEach(function (item) {
     var title = item.querySelector('.a--0') && item.querySelector('.a--0').textContent.trim();
     var child = item.querySelector('.box--1');
-    child.setAttribute('data-title', title);
+    if (child) child.setAttribute('data-title', title);
   });
 }
 
@@ -1360,6 +1363,42 @@ $j(document).ready(function ($) {
     if ($(event.target).hasClass('parent')) {
       $(event.target).toggleClass('on');
     }
+  });
+  addSVG({
+    'z-down': {
+      selector: '.header .categories .li--0.parent .a--0',
+      mode: 'append'
+    }
+  });
+
+  if ($('#banner__home_banner_full .banner__wrapper').length) {
+    $('#banner__home_banner_full .banner__wrapper').owlCarousel({
+      addClassActive: true,
+      items: 1,
+      singleItem: true,
+      itemScaleUp: true,
+      autoPlay: 7000,
+      navigationText: navigationText,
+      stopOnHover: true,
+      navigation: true,
+      pagination: false,
+      responsiveRefreshRate: 60,
+      slideSpeed: 400
+    });
+  }
+
+  $('.block-blog__list').each(function () {
+    $(this).owlCarousel({
+      navigation: true,
+      navigationText: navigationText,
+      items: 3,
+      itemsCustom: productsItemsBlockNews,
+      beforeMove: function beforeMove() {
+        if (typeof $.fn.lazyload != 'undefined') {
+          $(element).find('img').lazyload();
+        }
+      }
+    });
   });
 }).on('resizeStop', function (e) {// Safe window.resize
   // Dispara apÃ³s o Ãºltimo movimento de resize parar no navegador.

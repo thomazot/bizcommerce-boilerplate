@@ -1,0 +1,22 @@
+<h2 class="products__header">
+    <a href="@url" itemprop="url" title="Mais detalhes" class="product-link">
+        <span class="products__image product-image">@foto(305x305)</span>
+    </a>
+</h2>
+<div class="products__main">
+	<a href="@url" title="@nome(60)" class="products__name">@nome</a>
+	@variacoes
+
+	@if(is_disponivel)
+		@preco
+        @preco(avista)
+        @preco(parcelado)
+    @else(is_disponivel)
+	    <div class="products__out">Produto Esgotado</div>
+	@endif(is_disponivel)
+
+	@selos
+</div>
+<div class="products__footer">
+    @bt(comprar "Comprar")
+</div>

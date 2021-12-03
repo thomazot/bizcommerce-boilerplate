@@ -1,0 +1,44 @@
+.search
+    .header &
+        flex: 0 1 310px
+        gap: gap
+
+        @media media-max-lg
+            flex: 1
+
+        @media media-max-sm
+            flex: 0 0 auto
+
+            &.on .search__input
+                height: 90px
+
+            &__hide
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 85px
+
+        &__input
+            padding: 0
+            height: 40px
+            border-bottom: solid 2px var(--primary-contrast)
+            border-radius: 0 !important
+            background: none
+            box-shadow: none
+            color: var(--primary-contrast)
+            font-weight: regular
+            font-size: 12px
+            line-height: 1
+
+            &::placeholder
+                color: var(--primary-contrast)
+
+            &:focus::placeholder
+                color: transparent
+
+        &__button
+            order: -1
+
+            .ico
+                width: 20px
+                height: 20px
