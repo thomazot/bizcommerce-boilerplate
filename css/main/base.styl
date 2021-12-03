@@ -643,45 +643,6 @@ form.searchautocomplete
 .newsletter
     position: relative
 
-.newsletter__form
-    display: flex
-    flex-flow: row wrap
-    align-items: center
-    transition: all 300ms ease-out
-
-.newsletter__text
-    flex: 1 1 100%
-    margin-bottom: 1rem
-    padding: 0 .25rem
-
-.newsletter__name
-    display: flex
-    flex: 1 1 20%
-    align-items: center
-    padding: 0 .25rem .5rem
-    min-width: 250px
-
-.newsletter__gender
-    display: flex
-    flex: 1 1 auto
-    align-items: center
-    padding: 0 .25rem .5rem
-    min-width: 250px
-
-.newsletter__email
-    display: flex
-    flex: 1 1 40%
-    align-items: center
-    padding: 0 .25rem .5rem
-    min-width: 250px
-
-.newsletter__submit
-    flex: 1 1 auto
-    padding: 0 .25rem .5rem
-
-.newsletter__btn
-    width: 100%
-
 .newsletter__loader
     position: absolute
     top: calc(50% - 1.375rem)
@@ -2798,63 +2759,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 
 .header .loginout
     text-align: right
-
-/* Footer */
-.footer-container
-    margin: 4rem 0 0
-    padding: 1rem 0
-    background: linear-gradient(var(--primary), var(--primary-hover))
-
-.footer
-    color: var(--primary-contrast)
-    font-size: .8rem
-
-.footer .newsletter
-    margin: '0 -%s' % (gap / 2)
-    padding: 1rem 0
-    border-bottom: 1px solid rgba(0, 0, 0, 0)
-    background: rgba(0, 0, 0, .2)
-    box-shadow: -980px 0 0 rgba(0, 0, 0, .2), 980px 0 0 rgba(0, 0, 0, .2)
-    font-size: 1rem
-
-.footer .newsletter .title
-    color: var(--primary-contrast)
-    text-align: center
-
-.footer .flex .title
-    color: var(--primary-contrast)
-    font-size: 1rem
-    opacity: .5
-
-.footer .std
-    color: var(--primary-contrast)
-
-.footer .tele
-    font-size: 2rem
-
-.footer .email
-    padding-top: .5rem
-    font-weight: 600
-
-.footer a
-    color: var(--primary-contrast)
-
-.footer a:hover
-    color: var(--primary-contrast-hover)
-
-.footer .myaccount__header a
-    margin-left: auto
-    background: #fff !important
-    box-shadow: 0 0 0 4px #fff
-
-.footer .myaccount__header a:hover
-    box-shadow: 0 0 0 4px #fff, 0 1rem 1rem -.5rem rgba(0, 0, 0, .3)
-
-.footer .myaccount__content
-    display: none !important
-
-.footer .socials
-    padding-top: 1rem
 
 /* Catálogo */
 .category-description
@@ -9119,12 +9023,6 @@ table .change-product-link:hover
     .options input.datetime-picker
         flex: 0 0 5rem
 
-/* ------ Newsletter */
-/* ~568px */
-@media (max-width: 35.5rem)
-    .newsletter__form
-        display: block
-
 /* ------ .page-title */
 /* ~768px */
 @media (max-width: 48rem)
@@ -9715,24 +9613,6 @@ table .change-product-link:hover
     .header .myaccount, .header .mycart
         z-index: 10
         margin-left: 0
-
-/* ------ Footer */
-/* ~1408px */
-@media (max-width: 88rem)
-    .footer .newsletter
-        padding-right: 1rem
-        padding-left: 1rem
-
-/* ~768px */
-@media (max-width: 48rem)
-    .footer__payments, .footer__shipments, .footer__certificates
-        flex: 1 1 100%
-
-    .pays__list, .ships__list, .certs__list
-        justify-content: center
-
-    .footer .pays__title, .footer .ships__title, .footer .certs__title
-        display: none
 
 /* ------ Catálogo */
 /* ~768px */
@@ -10451,9 +10331,6 @@ table .change-product-link:hover
         min-width: 60px
         text-align: center
         line-height: 1em
-
-    .customer-account .footer .newsletter, .customer-account .footer__about, .customer-account .footer__doubts, .customer-account .footer__account, .customer-account .footer__payments, .customer-account .footer__shipments, .customer-account .footer__certificates
-        display: none
 
     .block-account .block-title
         position: fixed

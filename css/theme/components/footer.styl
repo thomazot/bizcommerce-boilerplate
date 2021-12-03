@@ -1,0 +1,39 @@
+.footer
+    padding: 40px 0
+
+    &-container
+        margin-top: 50px
+        background: var(--primary)
+        color: var(--primary-contrast)
+
+    &__content
+        display: grid
+        grid-template-areas: 'fmenu' 'fnews' 'fsocial'
+        gap: gap
+
+        @media media-min-lg
+            grid-template-columns: 1fr 1fr
+            grid-gap: 32px 115px
+            grid-template-areas: 'fmenu fnews' 'fmenu fsocial'
+
+        .mymenu
+            grid-area: fmenu
+
+        .newsletter
+            grid-area: fnews
+
+        .socials
+            grid-area: fsocial
+
+    &__copyright
+        padding: gap 0 0
+
+        .std
+            color: currentColor
+
+            p
+                margin: 0
+                color: currentColor
+                font-weight: regular
+                font-size: 11px
+                line-height: 18px
