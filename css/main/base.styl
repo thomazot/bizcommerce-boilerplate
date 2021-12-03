@@ -846,7 +846,6 @@ form.searchautocomplete
 
 .products--list .products__case
     display: flex
-    flex-flow: row nowrap
     align-items: center
 
 .products--list .product__header
@@ -2396,34 +2395,27 @@ body:not(.mobile) .categories .ul--1
 .owl-prev, .owl-next
     position: absolute
     top: calc(50% - 1.375rem)
+    display: flex
+    justify-content: center
+    align-items: center
     overflow: hidden
-    width: 2.75rem
-    height: 2.75rem
-    border-radius: 3px
-    background: var(--primary)
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1)
-    color: var(--primary-contrast)
-    text-indent: -9999px
-    font-size: 0
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: var(--primary-contrast)
+    box-shadow: shadow
+    color: var(--primary)
 
-.owl-prev:before, .owl-next:before
-    position: absolute
-    top: 0
-    left: 0
-    display: block
-    width: 100%
-    height: 100%
-    text-align: center
-    line-height: 2.75rem
+    &:hover
+        background: var(--primary)
+        color: var(--primary-contrast)
 
-    icon('\f053')
+    .ico
+        width: 6px
+        height: 11px
 
-    text-indent: 0
-    font-size: 1rem
-
-.owl-prev:hover, .owl-next:hover
-    background: var(--primary-hover)
-    color: var(--primary-contrast-hover)
+.owl-next
+    left: 100%
 
 body.ie .owl-prev, body.ie .owl-next
     text-indent: 0
@@ -2436,13 +2428,8 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 .owl-prev
     right: 100%
 
-.owl-next
-    left: 100%
-
-.owl-next:before, .owl-page span
+.owl-page span
     background: var(--primary)
-
-    icon('\f054')
 
 /* Feed RSS */
 .feeds__list
@@ -2749,10 +2736,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 
 .banner--nojs img.m_img
     display: none
-
-.banner--nojs .banner__wrapper
-    column-gap: 0
-    column-count: 3
 
 .banner--nojs .banner__item
     display: block
@@ -9177,10 +9160,6 @@ table .change-product-link:hover
 @media (max-width: 35.5rem)
     .products__item
         flex: 1 1 100%
-
-    .products__case
-        display: flex
-        flex-flow: row nowrap
 
     .product__header
         flex: 0 0 40%

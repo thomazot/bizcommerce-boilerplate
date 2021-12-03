@@ -1,0 +1,42 @@
+.block-news
+    margin: 0 auto
+    color: var(--primary-contrast)
+
+    .products
+        padding: gap 0
+        background: var(--primary)
+        color: currentColor
+
+        shadowBorder()
+
+    &__text
+        position: relative
+        padding-bottom: gap
+        color: var(--primary-contrast)
+
+        &:before
+            position: absolute
+            top: 0
+            z-index: -1
+            width: 100%
+            height: 100%
+            background: var(--primary)
+            content: ''
+
+            shadowBorder()
+
+            @media media-min-lg
+                height: calc(100% - 315px)
+
+        .video-fix-frame
+            display: block
+            margin-top: 32px
+
+        .std
+            color: currentColor
+
+            &, p
+                text()
+
+            h2
+                titleProduct()

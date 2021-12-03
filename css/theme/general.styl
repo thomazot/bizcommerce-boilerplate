@@ -1,3 +1,5 @@
+json('../../tokens.json')
+data = json('../../tokens.json', { hash: true, leave-strings: true })
 
 /**
  * Mixins
@@ -14,26 +16,8 @@ icon(i)
     -webkit-font-smoothing: antialiased
 
 /**
- * Mixin - Font-weight
- */
-font = 'Be-Vietnam', sans-serif
-light = 300
-regular = 400
-medium = 500
-semibold = 600
-bold = 700
-/**
- * Mixin - Viewport
- */
-viewport = 1120px
-gap = 20px
-radius = 4px
-/**
  * Mixin - Responsive
  */
-screen-sm = 569px
-screen-md = 769px
-screen-lg = 993px
 screen-sm-max = (screen-sm - 1)
 screen-md-max = (screen-md - 1)
 screen-lg-max = (screen-lg - 1)
@@ -62,4 +46,21 @@ shadowBorder()
         box-shadow: 800px 0 0 @background, -800px 0 0 @background
 
     @media media-max-lg
-        box-shadow: 300px 0 0 @background, -300px 0 0 @background
+        box-shadow: 290px 0 0 @background, -290px 0 0 @background
+
+titleProduct()
+    margin-bottom: 32px
+    color: currentColor
+    font-weight: bold
+    font-size: 28px
+    line-height: 24px
+
+text()
+    color: currentColor
+    font-weight: regular
+    font-size: 16px
+    line-height: 20px
+
+attr(property)
+    for key, value in property
+        {key}: unquote(value)

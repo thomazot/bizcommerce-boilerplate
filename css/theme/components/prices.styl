@@ -1,0 +1,59 @@
+
+.price-box-avista
+    .products__item &
+        display: inline-flex
+        flex-wrap: nowrap
+        align-items: center
+        margin-bottom: 0
+        line-height: 1
+
+        .label, .price
+            span
+                attr(data.prices.incash)
+
+                line-height: 1
+
+        .label
+            margin: 0
+
+            span
+                font-weight: regular
+
+        .price
+            flex: 0 0 auto
+            order: -1
+            margin-right: 3px
+
+            span
+                font-weight: bold
+
+.price-box-parcelado
+    .products__item &
+        .preco-parcelado
+            display: none
+
+        .preco-parcelado-sem-juros
+            &:before
+                content: 'ou '
+
+            &:before, .upto span, .num span, .de span, .value span, .s-juros span
+                attr(data.prices.payment)
+
+.special-price, .regular-price, .minimal-price
+    .products__item &
+        .label
+            display: none
+
+        .price span
+            attr(data.prices.special)
+
+.old-price
+    .products__item &
+        .label
+            display: none
+
+        .price
+            text-decoration: none
+
+            span
+                attr(data.prices.old)
