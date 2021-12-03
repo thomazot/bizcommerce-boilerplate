@@ -1,0 +1,58 @@
+color = #666
+
+.toolbar
+    select
+        padding: 0 30px 0 12px
+        min-width: 65px
+        height: 32px
+        border: 1px solid #E9E9E9
+        border-radius: radius
+        background: #fff url(down) no-repeat center right 10px
+        box-shadow: none
+        color: color
+        font-weight: regular
+        font-size: 14px
+        appearance: none
+
+    .amount
+        color: color
+        font-weight: regular
+        font-size: 14px
+
+        span
+            font-weight: regular
+
+    .view-mode
+        .list, .grid
+            height: 24px
+
+    .limiter, .sort-by
+        label
+            color: color
+            font-weight: regular
+            font-size: 14px
+
+.toolbar-bottom
+    padding: 20px 0
+    border-top: solid 1px #E9E9E9
+    border-bottom: solid 1px #E9E9E9
+
+    .amount
+        color: var(--primary)
+
+.pager
+    a.next, a.previous
+        &:before
+            font-size: 9px
+
+    li
+        a, &
+            font-weight: regular
+            font-size: 14px
+
+        span span
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            background: var(--primary)
+            line-height: 40px

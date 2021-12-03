@@ -1,0 +1,40 @@
+bg = #F7F7F7
+color = #666
+
+.filters
+    .title
+        @media media-min-lg
+            display: none
+
+    &__filter
+        padding: 24px
+        border-radius: radius
+        box-shadow: 0 0 0 1px #E9E9E9
+
+        &:not(:last-child)
+            margin-bottom: 12px
+
+        &:first-child
+            @media media-max-lg
+                margin-top: 12px
+
+        .a--0, .a--0current, .a-filter, .link, .count
+            color: color
+            font-weight: regular
+            font-size: 13px
+
+        &.category, &.categoria
+            background: bg
+            box-shadow: none
+
+            .count, ul ul
+                display: none
+
+    &__name
+        color: var(--primary)
+        text-transform: uppercase
+        font-weight: semibold
+        font-size: 13px
+
+    &__list
+        background: white

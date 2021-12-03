@@ -1060,19 +1060,9 @@ function is468() {
  */
 function hideHeader(status) {
     if (status) {
-        $j('.header-container').animate(
-            {
-                top: '-' + $j('.header-container').outerHeight() + 'px',
-            },
-            200
-        )
+        $j('body').addClass('header-hidden')
     } else {
-        $j('.header-container').animate(
-            {
-                top: '0px',
-            },
-            200
-        )
+        $j('body').removeClass('header-hidden')
     }
     return false
 }
@@ -1244,7 +1234,7 @@ $j.fn.neonTheme.custom = {
     fix_IE_SVGs: true, // corrige as dimensões de SVGs inline no IE
     fix_zoomHeader: true, // corrige o z-index do .header e do zoom dos produtos no :hover de cada um
     fix_address_phone: true, // corrige a exibição do ícone de telefone nas listagens de endereços
-    fix_category_description: true, // troca a posição padrão da descrição da categoria
+    fix_category_description: false, // troca a posição padrão da descrição da categoria
     fix_catalog_flexbox: true, // adiciona elementos para arrumar o flexbox do catálogo
     /* - Responsivo */
     m_categories: true, // ativa o responsivo do Menu de Categorias
@@ -1492,6 +1482,10 @@ $j(document)
                     }
                 },
             })
+        })
+
+        $('.category-image').each(function () {
+            $('.header-container').after(this)
         })
     })
     .on('resizeStop', function (e) {

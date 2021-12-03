@@ -1,0 +1,37 @@
+.breadcrumb
+    padding: 16px 0
+
+    &__sep
+        display: flex
+        justify-content: center
+        align-items: center
+
+        span
+            display: none
+
+        &:before
+            display: block
+            width: 4px
+            height: 4px
+            border-radius: 50%
+            background: var(--primary)
+            content: ' '
+            opacity: .2
+
+    &__link
+        color: var(--primary)
+        font-weight: medium
+        font-size: 13px
+        line-height: 1
+        opacity: .4
+
+    &__last
+        color: var(--primary)
+        font-weight: semibold
+        font-size: 13px
+        line-height: 1
+        opacity: 1
+
+        span
+            display: inline-block
+            line-height: 1
