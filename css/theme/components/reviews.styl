@@ -1,0 +1,21 @@
+.reviews
+    margin-bottom: 50px
+    padding-top: 30px
+    border-top: solid 1px #C4C4C4
+
+    &__title
+        titleProductPage()
+
+    &__content
+        flex-wrap: wrap
+        gap: gap
+
+    &__resume, &__ratings, &__add
+        flex: 1 1 250px
+        padding: 0
+        min-width: 0
+        box-shadow: none
+
+    &__resume, &__add
+        @media media-min-lg
+            flex: 0 1 265px

@@ -143,9 +143,9 @@ svg.img-twitter
 /* sub title */
 .subtitle
     margin-bottom: 1rem
-    color: rgba(0, 0, 0, .5)
-    font-weight: 700
-    font-size: .8rem
+    color: var(--primary)
+    font-weight: medium
+    font-size: 16px
 
 .title + .subtitle
     margin-top: -1rem
@@ -3232,16 +3232,16 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 
 /* Avaliações */
 .product-rate .rating-box
-    height: 1em
+    margin-bottom: 10px
 
 .product-rate .rating-box:before
     color: rgba(0, 0, 0, .2)
     content: '\f005\f005\f005\f005\f005'
     letter-spacing: 2px
-    font-size: 1em
+    font-size: 16px
 
 .product-rate .rating:before
-    color: #faa332
+    color: var(--primary)
     letter-spacing: 2px
     font-size: 1em
 
@@ -3461,25 +3461,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 
 .add-to-cart-btn.no-qty
     padding: 0 1rem
-
-/* @links */
-.add-to-links li:not(:last-child)
-    margin-bottom: .25rem
-
-.add-to-links a
-    display: block
-    padding: .5rem
-    border-radius: 3px
-    background: #fff
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1)
-    color: rgba(0, 0, 0, .7)
-    text-align: center
-    font-weight: 600
-    font-size: .8rem
-
-.add-to-links a:hover
-    background: var(--primary)
-    color: var(--primary-contrast)
 
 /* @fotos */
 .product-image-gallery
@@ -3799,47 +3780,9 @@ body.safari .product-image-thumbs .thumb-link
     display: none
 
 /* Tabs */
-.tabs
-    display: flex
-    flex-flow: row wrap
-    align-items: stretch
-
-.tabs__tab
-    position: relative
-    z-index: 5
-    order: 1
-    align-self: flex-end
-    padding: 0 1em
-    height: 2.75em
-    border: 1px solid rgba(0, 0, 0, .1)
-    border-bottom: 0
-    font-size: .9rem
-    line-height: 2.75em
-    cursor: pointer
-
-.tabs__tab:not(:last-child)
-    margin-right: .25rem
-
-.tabs__tab.on
-    top: 1px
-    background: #fff
-    font-size: 1rem
-    cursor: default
-
-.tabs__tab:hover
-    background: #fff
-
 .tabs__content
-    display: none
     flex: 1 1 100%
-    order: 2
-    padding: 1rem
     max-width: 100%
-    border: 1px solid rgba(0, 0, 0, .1)
-    background: #fff
-
-.tabs__content.on
-    display: block
 
 .tabs__hide
     display: none
@@ -4524,6 +4467,22 @@ tr.bundle:before
     background: #fff
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1)
 
+    .title
+        color: #666
+        font-weight: medium
+        font-size: 16px
+
+    .form-list
+        label
+            color: var(--primary)
+            font-weight: medium
+            font-size: 16px
+
+    input, textarea
+        border: 1px solid #E9E9E9
+        border-radius: radius
+        box-shadow: none
+
 .reviews__resume .product-rate
     display: flex
     flex-flow: column nowrap
@@ -4531,15 +4490,12 @@ tr.bundle:before
 
 .reviews__resume .product-rate .amount
     display: block
-    font-weight: 600
-    opacity: .5
+    color: #666
+    font-weight: medium
+    font-size: 16px
 
 .reviews__resume .product-rate .percent
     display: block
-
-.reviews__resume .product-rate .rating-box
-    margin-bottom: 1rem
-    font-size: 1.5rem
 
 .reviews__resume .product-rate .circle-percent .on
     stroke-width: 4px
@@ -4619,6 +4575,15 @@ tr.bundle:before
 
 .reviews__add .btn
     width: 100%
+    border-radius: radius
+    background: var(--button)
+    color: var(--button-contrast)
+    font-weight: bold
+    font-size: 14px
+
+    &:hover
+        background: var(--button-hover)
+        color: var(--button-hover-contrast)
 
 .reviews__add .svg-loader
     position: absolute
@@ -4657,7 +4622,6 @@ tr.bundle:before
     margin: 0 auto 1rem
 
 .reviews__no-reviews
-    padding-top: 10rem
     text-align: center
 
 .reviews .be-first
@@ -4665,13 +4629,17 @@ tr.bundle:before
     font-weight: 700
 
 .review-summary
-    display: flex
-    justify-content: center
-    align-items: center
+    --primary: #666666
+
+    &
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        gap: 6px
 
 .review-summary li
     flex: 0 0 auto
-    margin: 0 .5rem
+    margin: 0
     height: 2.25rem
     line-height: 2.25rem
 
@@ -4684,7 +4652,7 @@ tr.bundle:before
     display: block
     margin: 0
     text-align: center
-    font-size: 1.5rem
+    font-size: 16px
     cursor: pointer
 
 .review-summary label:before
@@ -4698,8 +4666,7 @@ tr.bundle:before
     color: rgba(0, 0, 0, .3)
 
 .review-summary .active label:before
-    color: #faa332
-    transform: scale(1.5)
+    color: var(--primary)
 
 .reviews__hide
     display: none
@@ -9697,67 +9664,6 @@ table .change-product-link:hover
         margin: -1rem -1rem 1rem
         border-radius: 0
 
-    /* @simulador-frete */
-    .frete__title
-        margin: 0
-        padding: 1rem
-        border: 1px solid rgba(0, 0, 0, .1)
-        border-radius: 0
-        background: #fff
-        box-shadow: none
-        font-size: 1rem
-
-        > span
-            order: -1
-            margin-right: auto
-
-        .ico
-            margin-right: 0
-
-    .frete__content
-        position: fixed
-        top: 0
-        left: 100%
-        z-index: 999
-        display: flex
-        flex-flow: column nowrap
-        justify-content: center
-        align-items: center
-        overflow-y: auto
-        padding: 1rem
-        width: 100vw
-        height: 100vh
-        background: #fff
-        transition: 600ms cubic-bezier(.23, 1, .32, 1)
-
-    .frete--open .frete__content
-        display: flex
-        transform: translateX(-100%)
-
-    .frete__hide
-        position: absolute
-        top: 0
-        right: 0
-        left: 0
-        display: block
-        margin: 0
-        border-radius: 0
-
-    .frete__results
-        position: fixed
-        top: 0
-        left: 0
-        z-index: 9999
-        display: block !important
-        overflow-y: auto
-        width: 100vw
-        height: 100vh
-        transition: 600ms cubic-bezier(.23, 1, .32, 1)
-        transform: translateY(100%)
-
-    .frete.on .frete__results
-        transform: translateY(0)
-
     /* Produto - Compre Junto */
     .jointsales .owl-buttons
         display: block
@@ -9804,53 +9710,6 @@ table .change-product-link:hover
     .sharing-links .list:before
         display: none
 
-    /* .tabs */
-    .tabs
-        display: block
-
-    .tabs__tab
-        position: static
-        top: 0
-        display: flex
-        align-items: center
-        margin: 0 -1rem !important
-        padding: 1rem
-        border: 0
-        border-bottom: 1px solid rgba(0, 0, 0, .1)
-        background: #fff
-        font-weight: 700
-        font-size: 1rem
-
-    .tabs__tab:first-child
-        margin-left: auto
-
-    .tabs__tab:after
-        icon('\f105')
-
-        margin-left: auto
-
-    .tabs__content
-        position: fixed
-        top: 0
-        left: 0
-        z-index: 999
-        overflow-y: auto
-        padding: 1rem
-        width: 100vw
-        height: 100vh
-        border: 0
-        background: #fff
-        transition: 600ms cubic-bezier(.23, 1, .32, 1)
-        transform: translateX(100%)
-
-    .tabs__content.open
-        transform: translateX(0)
-
-    .tabs__hide
-        display: block
-        margin: -1rem -1rem 1rem
-        border-radius: 0
-
     /* Produto
      * @relacionados
      * @recomendados
@@ -9858,7 +9717,7 @@ table .change-product-link:hover
      * @compre-junto
      * @vendas-acima
      */
-    .related__title, .recommended__title, .whosaw__title, .jointsales__title, .upsell__title
+    .related__title, .recommended__title, .whosaw__title, .upsell__title
         display: flex
         align-items: center
         margin: 0 -1rem
@@ -9869,7 +9728,7 @@ table .change-product-link:hover
         font-size: 1rem
         cursor: pointer
 
-    .related__title:after, .recommended__title:after, .whosaw__title:after, .jointsales__title:after, .upsell__title:after
+    .related__title:after, .recommended__title:after, .whosaw__title:after, .upsell__title:after
         icon('\f105')
 
         margin-left: auto
@@ -9887,114 +9746,10 @@ table .change-product-link:hover
         transition: 600ms cubic-bezier(.23, 1, .32, 1)
         transform: translateX(100%)
 
-    .related.on .related__content, .recommended.on .recommended__content, .whosaw.on .whosaw__content, .jointsales.on .jointsales__content, .upsell.on .upsell__content
+    .related.on .related__content, .recommended.on .recommended__content, .whosaw.on .whosaw__content, .upsell.on .upsell__content
         transform: translateX(0)
 
-    .related__hide, .recommended__hide, .whosaw__hide, .jointsales__hide, .upsell__hide
-        display: block
-        margin: -1rem -1rem 1rem
-        border-radius: 0
-
-    /* @compre-junto */
-    .jointsales__content
-        display: block
-
-    .jointsales__current
-        flex-flow: row nowrap
-        margin: 0
-        padding: 0
-
-    .jointsales .more
-        top: calc(100% - 1rem)
-        right: calc(50% - 1rem)
-        transform: scale(1.5)
-
-    .jointsales__items
-        min-width: 100%
-
-    .jointsales .owl-wrapper-outer
-        border-width: 0 1px 1px
-
-    .jointsales__row
-        display: block
-
-    .jointsales__list
-        display: block
-
-    .jointsales__item
-        display: flex
-        flex-flow: row wrap
-        padding: 0
-        max-width: none
-
-    .jointsales__item:not(:first-child)
-        margin-top: 1rem
-        padding-top: 1rem
-        border: 0
-        border-top: 1px solid rgba(0, 0, 0, .1)
-
-    .jointsales__item .thumb
-        flex: 0 0 40%
-        margin: 0
-        padding: 0 1rem 0 0
-
-    .btn-jointsales
-        width: 100%
-
-    /* avaliacoes(form) */
-    .reviews .subtitle
-        border-top: 1px solid rgba(0, 0, 0, .1)
-        text-align: center
-        opacity: .5
-
-    .reviews__title
-        display: flex
-        align-items: center
-        margin: 0 -1rem
-        padding: 1rem
-        border-bottom: 1px solid rgba(0, 0, 0, .1)
-        background: #fff
-        font-weight: 400
-        font-size: 1rem
-
-    .reviews__title:after
-        icon('\f123')
-
-        margin-left: auto
-
-    .reviews__content
-        position: fixed
-        top: 0
-        left: 0
-        z-index: 999
-        display: block
-        overflow-y: auto
-        padding: 1rem
-        width: 100vw
-        height: 100vh
-        background: #fff
-        transition: 600ms cubic-bezier(.23, 1, .32, 1)
-        transform: translateX(100%)
-
-    .reviews.on .reviews__content
-        transform: translateX(0)
-
-    .reviews__resume, .reviews__ratings, .reviews__add
-        margin: 0
-        padding: 0
-        background: none
-        box-shadow: none
-
-    .reviews__resume .product-rate .percent
-        margin: 0 20%
-
-    .reviews__ratings
-        margin-bottom: 1rem
-
-    .reviews__no-reviews
-        padding: 0
-
-    .reviews__hide
+    .related__hide, .recommended__hide, .whosaw__hide, .upsell__hide
         display: block
         margin: -1rem -1rem 1rem
         border-radius: 0
@@ -10009,40 +9764,6 @@ table .change-product-link:hover
         margin-right: -1rem
         margin-left: -1rem
         border-width: 0 0 1px
-
-    /* @links */
-    .add-to-links
-        margin: 0 !important
-
-    .add-to-links li:not(:last-child)
-        margin: 0
-
-    .add-to-links a
-        display: flex
-        align-items: center
-        margin: 0 -1rem
-        padding: 1rem
-        border-bottom: 1px solid rgba(0, 0, 0, .1)
-        border-radius: 0
-        box-shadow: none
-        text-align: left
-        font-weight: 400
-        font-size: 1rem
-        line-height: 1em
-
-    .add-to-links li:first-child a
-        border-top: 1px solid rgba(0, 0, 0, .1)
-
-    .add-to-links a:after
-        margin-left: auto
-
-    .add-to-links .link-wishlist a:after
-        display: inline
-
-        icon('\f004')
-
-    .add-to-links .link-compare a:after
-        content: '\f012'
 
     /* Empacotado */
     .bundle

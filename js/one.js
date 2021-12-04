@@ -532,7 +532,7 @@ const productsItemsBlockNews = [
             $j(document)
                 .on(
                     'click',
-                    '.related__title, .recommended__title, .whosaw__title, .jointsales__title, .upsell__title, .reviews__title',
+                    '.related__title, .recommended__title, .whosaw__title, .jointsales__title, .upsell__title',
                     function () {
                         if (is568()) {
                             if ($j(this).parent().hasClass('on')) {
@@ -1243,9 +1243,9 @@ $j.fn.neonTheme.custom = {
     m_myaccount: true, // ativa o responsivo da Minha Conta
     m_mycart: true, // ativa o responsivo do Meu Carrinho
     m_parcelamento: true, // ativa o responsivo do parcelamento na página de produto
-    m_frete: true, // ativa o responsivo do cálculo de frete na página do produto
+    m_frete: false, // ativa o responsivo do cálculo de frete na página do produto
     m_produto: true, // ativa o responsivo de cada bloco da página de produto
-    m_tabs: true, // ativa o responsivo do componente .tabs do tema
+    m_tabs: false, // ativa o responsivo do componente .tabs do tema
     m_painelCliente: true, // ativa o responsivo do Menu do Painel de Cliente
     /**
      * Funcionalidades do Tema

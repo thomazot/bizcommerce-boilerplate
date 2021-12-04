@@ -473,7 +473,7 @@ var productsItemsBlockNews = [[0, 1], [568, 2], [768, 3]];
 
 
     if (neon.m_produto !== false) {
-      $j(document).on('click', '.related__title, .recommended__title, .whosaw__title, .jointsales__title, .upsell__title, .reviews__title', function () {
+      $j(document).on('click', '.related__title, .recommended__title, .whosaw__title, .jointsales__title, .upsell__title', function () {
         if (is568()) {
           if ($j(this).parent().hasClass('on')) {
             $j(this).parent().removeClass('on');
@@ -1188,11 +1188,11 @@ $j.fn.neonTheme.custom = {
   // ativa o responsivo do Meu Carrinho
   m_parcelamento: true,
   // ativa o responsivo do parcelamento na página de produto
-  m_frete: true,
+  m_frete: false,
   // ativa o responsivo do cálculo de frete na página do produto
   m_produto: true,
   // ativa o responsivo de cada bloco da página de produto
-  m_tabs: true,
+  m_tabs: false,
   // ativa o responsivo do componente .tabs do tema
   m_painelCliente: true,
   // ativa o responsivo do Menu do Painel de Cliente

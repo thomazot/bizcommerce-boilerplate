@@ -1,0 +1,141 @@
+color = #666
+
+.prod
+    &__img
+        flex: 0 1 50%
+
+    &__shop
+        .col
+            flex: 1
+            min-width: 0
+
+        .product-rate
+            margin-bottom: 10px
+
+            .to-rate
+                text-transform: uppercase
+                font-weight: regular
+                font-size: 10px
+
+        .price-box
+            margin-bottom: 5px
+
+        .qty-wrapper
+            display: none
+
+        .add-to-cart
+            margin-top: 10px
+
+        .add-to-cart-btn
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0
+            max-width: 285px
+            height: 56px
+            box-shadow: none
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 18px
+            line-height: 1
+
+    &__name
+        margin-bottom: 20px
+
+        h1
+            margin-bottom: 16px
+            font-weight: medium
+            font-size: 24px
+            line-height: 30px
+
+        .sku
+            color: color
+            font-weight: medium
+            font-size: 14px
+
+.product-image-container
+    display: flex
+    gap: gap
+
+.more-views
+    order: -1
+
+.product-image-thumbs
+    display: block
+    flex: 0 1 75px
+
+.add-to-links
+    li:not(.link-wishlist)
+        display: none
+
+    a
+        color: color
+        font-weight: regular
+        font-size: 12px
+
+    .link-wishlist
+        a
+            display: flex
+            align-items: center
+
+            &:before
+                margin-right: 5px
+                content: url(heart)
+
+.frete
+    margin-top: 20px
+    max-width: 285px
+    width: 100%
+
+    &:before
+        display: block
+        padding-bottom: 10px
+        color: color
+        content: 'Calcule o Frete'
+        font-weight: regular
+        font-size: 14px
+
+    &__title
+        display: none
+
+    &__content
+        display: block
+
+    &__form
+        border: solid 2px #000
+        border-radius: radius
+
+        label
+            display: none
+
+        .input-text
+            flex: 1
+            min-width: 0
+            border: 0
+            background: none
+            box-shadow: none
+            font-weight: regular
+            font-size: 14px
+
+        .input-box
+            flex: 1
+            min-width: 0
+
+    &__naosei
+        color: color
+        font-weight: regular
+        font-size: 12px
+
+    &__actions
+        .btn
+            background: none
+            box-shadow: none
+            color: var(--primary)
+            font-weight: medium
+            font-size: 12px
+
+            &:before
+                content: 'Consultar'
+
+            span
+                display: none

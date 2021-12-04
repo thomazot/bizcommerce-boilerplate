@@ -27,6 +27,43 @@
             span
                 font-weight: bold
 
+    .prod__shop &
+        display: inline-flex
+        flex-wrap: nowrap
+        align-items: center
+        margin-bottom: 0
+        line-height: 1
+
+        &:before
+            order: -2
+            margin-right: 3px
+            margin-bottom: -2px
+            content: url(boleto)
+
+        .label, .price
+            span
+                attr(data.page.product.prices.incash)
+
+                line-height: 1
+
+        .label
+            margin: 0
+
+            span
+                font-weight: regular
+
+        .price
+            display: inline
+            flex: 0 0 auto
+            order: -1
+            margin-right: 3px
+            line-height: 16px
+
+            span
+                display: inline
+                font-weight: regular
+                line-height: 16px
+
 .price-box-parcelado
     .products__item &
         .preco-parcelado
@@ -47,6 +84,13 @@
         .price span
             attr(data.prices.special)
 
+    .prod__shop &
+        .label
+            display: none
+
+        .price span
+            attr(data.page.product.prices.special)
+
 .old-price
     .products__item &
         .label
@@ -57,3 +101,13 @@
 
             span
                 attr(data.prices.old)
+
+    .prod__shop &
+        .label
+            display: none
+
+        .price
+            text-decoration: none
+
+            span
+                attr(data.page.product.prices.old)

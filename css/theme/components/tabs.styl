@@ -1,0 +1,55 @@
+.tabs
+    margin: 0
+    padding: 0
+
+    &__tab
+        padding: 25px 0
+        border-top: solid 1px #C4C4C4
+
+        titleProductPage()
+
+    &__content
+        padding: 0 0 25px
+        border: 0
+
+        &, .stb
+            color: #666
+            font-weight: regular
+            font-size: 16px
+            line-height: 30px
+
+    &__table
+        > h2
+            display: none
+
+        table
+            background: none
+
+            tbody
+                th, td
+                    &:first-child, &:last-child
+                        border: 0
+
+                    &:first-child
+                        border-radius: radius 0 0 radius
+
+                    &:last-child
+                        border-radius: 0 radius radius 0
+
+            td, th
+                padding: 5px 16px
+                border: 0
+                border: 0
+                background: none
+                box-shadow: none
+                color: #666
+                font-weight: regular
+                font-size: 14px
+
+            th
+                width: 40%
+
+            tr
+                &:nth-child(odd)
+                    th, td
+                        background: #E9E9E9
